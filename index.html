@@ -1,0 +1,4788 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dilshad Yousuff — BI & Analytics Leader</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,600;0,700;1,600&family=Source+Serif+4:ital,opsz,wght@0,8..60,300;0,8..60,400;0,8..60,600;1,8..60,400&family=IBM+Plex+Sans:wght@300;400;500;600&display=swap"
+    rel="stylesheet">
+  <style>
+    *,
+    *::before,
+    *::after {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0
+    }
+
+    :root {
+      --bg: #07111f;
+      --bg2: #0f172a;
+      --bg3: #162033;
+      --bg4: #1e293b;
+
+      --surface: rgba(255, 255, 255, 0.04);
+      --surface2: rgba(255, 255, 255, 0.06);
+
+      --border: rgba(255, 255, 255, 0.08);
+      --border2: rgba(255, 255, 255, 0.14);
+
+      --text: #f8fafc;
+      --text2: #cbd5e1;
+      --text3: #94a3b8;
+
+      --navy: #4ea8ff;
+      --navy2: #60b6ff;
+      --navy-bg: rgba(78, 168, 255, 0.08);
+      --navy-border: rgba(78, 168, 255, 0.22);
+
+      --amber: #7dd3fc;
+      --amber2: #38bdf8;
+      --amber-bg: rgba(56, 189, 248, 0.08);
+      --amber-border: rgba(56, 189, 248, 0.25);
+
+      --teal: #38bdf8;
+      --teal-bg: rgba(56, 189, 248, 0.08);
+      --teal-border: rgba(56, 189, 248, 0.2);
+
+      --red: #f87171;
+      --blue: #60a5fa;
+
+      --r: 14px;
+      --r2: 24px;
+    }
+
+    html {
+      scroll-behavior: smooth
+    }
+
+    body {
+      font-family: 'IBM Plex Sans', sans-serif;
+      background:
+        radial-gradient(circle at top left, rgba(78, 168, 255, 0.12), transparent 28%),
+        radial-gradient(circle at bottom right, rgba(96, 165, 250, 0.12), transparent 28%),
+        linear-gradient(135deg, #07111f 0%, #0f172a 45%, #111827 100%);
+      background-attachment: fixed;
+      color: var(--text);
+      font-size: 16px;
+      line-height: 1.7;
+      overflow-x: hidden;
+    }
+
+    /* ── NAV ── */
+    nav {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      z-index: 200;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 0 2.5rem;
+      height: 70px;
+
+      background: rgba(7, 17, 31, 0.7);
+      backdrop-filter: blur(18px);
+
+      border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+
+      box-shadow: 0 8px 30px rgba(0, 0, 0, 0.3);
+    }
+
+    .nav-logo {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.1rem;
+      letter-spacing: 0.01em;
+      color: var(--text);
+      text-decoration: none;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .nav-logo-dot {
+      width: 7px;
+      height: 7px;
+      border-radius: 50%;
+      background: var(--amber);
+      flex-shrink: 0;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 2rem;
+      align-items: center
+    }
+
+    .nav-links a {
+      font-size: 0.8rem;
+      letter-spacing: 0.07em;
+      text-transform: uppercase;
+      color: var(--text3);
+      text-decoration: none;
+      cursor: pointer;
+      transition: color 0.2s;
+      font-weight: 500;
+    }
+
+    .nav-links a:hover,
+    .nav-links a.active {
+      color: var(--text)
+    }
+
+    .nav-cta {
+      font-size: 0.78rem;
+      font-weight: 600;
+      letter-spacing: 0.04em;
+      background: var(--navy);
+      color: #FFF;
+      padding: 8px 20px;
+      border-radius: 100px;
+      border: none;
+      font-family: inherit;
+      cursor: pointer;
+      transition: background 0.2s, transform 0.15s;
+    }
+
+    .nav-cta:hover {
+      background: var(--navy2);
+      transform: translateY(-1px)
+    }
+
+    /* ── PAGE SYSTEM ── */
+    .page {
+      display: none;
+      padding-top: 64px;
+      min-height: 100vh
+    }
+
+    .page.active {
+      display: block
+    }
+
+    /* ── SECTION JUMP LINKS ── */
+    .section-nav {
+      background: var(--surface);
+      border-bottom: 1px solid var(--border);
+      padding: 0 3rem;
+      display: flex;
+      gap: 0;
+      overflow-x: auto;
+    }
+
+    .section-nav a {
+      font-size: 0.75rem;
+      letter-spacing: 0.07em;
+      text-transform: uppercase;
+      color: var(--text3);
+      font-weight: 500;
+      padding: 14px 18px;
+      white-space: nowrap;
+      border-bottom: 2px solid transparent;
+      text-decoration: none;
+      transition: color 0.2s, border-color 0.2s;
+      cursor: pointer;
+    }
+
+    .section-nav a:hover {
+      color: var(--text);
+      border-bottom-color: var(--amber)
+    }
+
+    /* ── HERO ── */
+    .home-hero {
+      position: relative;
+      display: grid;
+      grid-template-columns: 1fr 400px;
+
+      border-bottom: 1px solid var(--border);
+
+      background: linear-gradient(135deg,
+          rgba(255, 255, 255, 0.03),
+          rgba(255, 255, 255, 0.02));
+
+      overflow: hidden;
+    }
+
+    .home-hero::before {
+      content: '';
+      position: absolute;
+      width: 500px;
+      height: 500px;
+      top: -180px;
+      right: -100px;
+      background: radial-gradient(circle, rgba(78, 168, 255, 0.18), transparent 70%);
+      pointer-events: none;
+    }
+
+    .hero-left {
+      padding: 4.5rem 3rem 4rem;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      border-right: 1px solid var(--border);
+    }
+
+    .hero-eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 12px;
+      font-size: 0.72rem;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+      color: var(--amber);
+      margin-bottom: 2rem;
+      font-weight: 600;
+      font-family: 'IBM Plex Sans', sans-serif;
+    }
+
+    .hero-eyebrow-line {
+      width: 36px;
+      height: 1.5px;
+      background: var(--amber);
+      opacity: 0.7
+    }
+
+    .hero-name {
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(3.2rem, 5.5vw, 5.5rem);
+      line-height: 0.95;
+      letter-spacing: -0.02em;
+      font-weight: 700;
+      margin-bottom: 0.4rem;
+      color: var(--text);
+    }
+
+    .hero-name-accent {
+      color: var(--navy);
+      display: block;
+    }
+
+    .hero-title {
+      font-family: 'Source Serif 4', serif;
+      font-size: clamp(1.05rem, 1.6vw, 1.25rem);
+      color: var(--text2);
+      font-style: italic;
+      margin-bottom: 2rem;
+      font-weight: 400;
+      line-height: 1.4;
+    }
+
+    .hero-desc {
+      font-size: 0.97rem;
+      color: var(--text2);
+      max-width: 480px;
+      line-height: 1.8;
+      margin-bottom: 2.5rem;
+      font-weight: 300;
+    }
+
+    .hero-desc strong {
+      color: var(--text);
+      font-weight: 600
+    }
+
+    .hero-actions {
+      display: flex;
+      gap: 1rem;
+      flex-wrap: wrap
+    }
+
+    .btn-primary {
+      background: linear-gradient(135deg, #38bdf8, #4ea8ff);
+      color: #fff;
+      padding: 13px 28px;
+      border-radius: 14px;
+      font-size: 0.88rem;
+      font-weight: 600;
+      border: none;
+      cursor: pointer;
+      font-family: inherit;
+      transition:
+        transform 0.3s ease,
+        box-shadow 0.3s ease,
+        background 0.3s ease;
+
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+
+      box-shadow: 0 10px 30px rgba(78, 168, 255, 0.25);
+    }
+
+    .btn-primary:hover {
+      transform: translateY(-3px);
+
+      box-shadow:
+        0 16px 40px rgba(78, 168, 255, 0.35);
+
+      background: linear-gradient(135deg, #60b6ff, #4ea8ff);
+    }
+    a.btn-primary{
+      text-decoration:none;
+    }
+
+    .btn-ghost {
+      background: transparent;
+      color: var(--text);
+      padding: 12px 28px;
+      border-radius: 100px;
+      font-size: 0.88rem;
+      font-weight: 500;
+      border: 1.5px solid var(--border2);
+      cursor: pointer;
+      font-family: inherit;
+      transition: border-color 0.2s, background 0.2s, transform 0.15s;
+    }
+
+    .btn-ghost:hover {
+      border-color: var(--navy);
+      color: var(--navy);
+      background: var(--navy-bg);
+      transform: translateY(-2px)
+    }
+
+    .resume-btn {
+      text-decoration: none;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    /* ── STAT CARDS (right panel) ── */
+    .hero-right {
+      padding: 3.5rem 2rem;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      gap: 1rem;
+      background: var(--bg);
+    }
+
+
+    .stat-cards-label {
+      font-size: 0.68rem;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--text3);
+      font-weight: 600;
+      margin-bottom: 0.5rem;
+    }
+
+    .stat-card:hover {
+      transform: translateY(-8px);
+      border-color: rgba(78, 168, 255, 0.3);
+
+      box-shadow:
+        0 20px 50px rgba(0, 0, 0, 0.45),
+        0 0 30px rgba(78, 168, 255, 0.12);
+
+      background: rgba(255, 255, 255, 0.06);
+    }
+
+    .stat-card:hover {
+      box-shadow: 0 6px 24px rgba(30, 48, 84, 0.1);
+      transform: translateY(-2px)
+    }
+
+    .stat-card::before {
+      content: '';
+      position: absolute;
+      left: 0;
+      top: 0;
+      bottom: 0;
+      width: 3px;
+      background: linear-gradient(to bottom, var(--amber), var(--navy));
+      border-radius: 3px 0 0 3px;
+    }
+
+    .stat-big {
+      font-family: 'Playfair Display', serif;
+      font-size: 2.6rem;
+      letter-spacing: -0.04em;
+      font-weight: 700;
+      line-height: 1;
+      color: var(--navy);
+      margin-bottom: 0.25rem;
+      display: block;
+    }
+
+    .stat-big em {
+      font-style: italic;
+      color: var(--amber)
+    }
+
+    .stat-desc {
+      font-size: 0.8rem;
+      color: var(--text3);
+      line-height: 1.45;
+      font-weight: 400
+    }
+
+    /* ── MARQUEE STRIP ── */
+    /*.marquee-strip{
+  border-top:1px solid var(--border);
+  border-bottom:1px solid var(--border);
+  background:var(--navy);
+  padding:12px 0;overflow:hidden;
+  position:relative;
+} */
+
+    .marquee-strip {
+      border-top: 1px solid rgba(255, 255, 255, 0.06);
+      border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+      background:
+        linear-gradient(90deg,
+          #163758 0%,
+          #1e4c62 50%,
+          #143450 100%);
+      padding: 14px 0;
+      overflow: hidden;
+      position: relative;
+    }
+
+    .marquee-strip::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background:
+        linear-gradient(90deg,
+          transparent,
+          rgba(78, 168, 255, 0.06),
+          transparent);
+      pointer-events: none;
+    }
+
+    .marquee-inner {
+      display: flex;
+      gap: 3rem;
+      animation: marquee 30s linear infinite;
+      width: max-content;
+    }
+
+    /*.marquee-inner span{
+  font-size:0.72rem;letter-spacing:0.1em;text-transform:uppercase;
+  color:rgba(255,255,255,0.65);white-space:nowrap;font-weight:500;
+}*/
+    .marquee-inner span {
+      font-size: 0.74rem;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: #dbeafe;
+      white-space: nowrap;
+      font-weight: 600;
+    }
+
+    /*.marquee-inner span.accent{color:var(--amber2)}*/
+    .marquee-inner span.accent {
+      color: #38bdf8;
+      opacity: 0.7;
+    }
+
+    @keyframes marquee {
+      from {
+        transform: translateX(0)
+      }
+
+      to {
+        transform: translateX(-50%)
+      }
+    }
+
+    /* ── MANIFESTO ── */
+    .manifesto {
+      padding: 4rem 3rem;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 4rem;
+      align-items: center;
+      border-bottom: 1px solid var(--border);
+      background: var(--surface);
+    }
+
+    .manifesto-quote {
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(1.5rem, 2.5vw, 2.1rem);
+      line-height: 1.3;
+      letter-spacing: -0.01em;
+      font-style: italic;
+      color: var(--text);
+    }
+
+    .manifesto-quote span {
+      color: var(--amber)
+    }
+
+    .manifesto-right p {
+      font-size: 0.95rem;
+      color: var(--text2);
+      line-height: 1.85;
+      margin-bottom: 0.9rem;
+      font-weight: 300
+    }
+
+    .manifesto-right p:last-child {
+      margin: 0
+    }
+
+    .manifesto-right strong {
+      color: var(--text);
+      font-weight: 600
+    }
+
+    /* ── SECTION LABEL ── */
+    .section-label {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      font-size: 0.7rem;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: var(--text3);
+      margin-bottom: 2.5rem;
+      font-weight: 600;
+    }
+
+    .section-label::after {
+      content: '';
+      flex: 1;
+      height: 1px;
+      background: var(--border)
+    }
+
+    .section-label-dot {
+      width: 5px;
+      height: 5px;
+      border-radius: 50%;
+      background: var(--amber);
+      flex-shrink: 0
+    }
+
+    /* ── SKILLS ── */
+    .skills-section {
+      padding: 4rem 3rem;
+      border-bottom: 1px solid var(--border);
+      background: transparent
+    }
+
+    .skills-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1rem;
+    }
+
+    .skill-cell {
+      background: rgba(255, 255, 255, 0.04);
+
+      backdrop-filter: blur(12px);
+
+      border: 1px solid rgba(255, 255, 255, 0.08);
+
+      border-radius: 24px;
+
+      padding: 1.8rem;
+
+      transition:
+        transform 0.35s ease,
+        border-color 0.35s ease,
+        box-shadow 0.35s ease,
+        background 0.35s ease;
+    }
+
+    .skill-cell:hover {
+      transform: translateY(-8px);
+
+      border-color: rgba(78, 168, 255, 0.28);
+
+      background: rgba(255, 255, 255, 0.06);
+
+      box-shadow:
+        0 20px 40px rgba(0, 0, 0, 0.35),
+        0 0 24px rgba(78, 168, 255, 0.08);
+    }
+
+    .skill-icon {
+      width: 38px;
+      height: 38px;
+      border-radius: 9px;
+      background: var(--navy-bg);
+      border: 1px solid var(--navy-border);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 0.9rem;
+    }
+
+    .skill-icon svg {
+      width: 17px;
+      height: 17px;
+      stroke: var(--navy);
+      fill: none;
+      stroke-width: 1.8
+    }
+
+    .skill-name {
+      font-weight: 600;
+      font-size: 0.95rem;
+      color: var(--text);
+      margin-bottom: 0.4rem
+    }
+
+    .skill-tools {
+      font-size: 0.8rem;
+      color: var(--text3);
+      line-height: 1.6
+    }
+
+    /* ── EXPERIENCE ── */
+    .experience-section {
+      padding: 4rem 3rem;
+      border-bottom: 1px solid var(--border);
+      background: transparent
+    }
+
+    .exp-list {
+      display: flex;
+      flex-direction: column
+    }
+
+    .exp-item {
+      display: grid;
+      grid-template-columns: 210px 1fr;
+      gap: 3rem;
+      padding: 2.5rem 0;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .exp-item:last-child {
+      border-bottom: none;
+      padding-bottom: 0
+    }
+
+    .exp-period {
+      font-size: 0.75rem;
+      color: var(--text3);
+      letter-spacing: 0.04em;
+      margin-bottom: 0.5rem;
+      font-weight: 500
+    }
+
+    .exp-company {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.1rem;
+      font-style: italic;
+      color: var(--text);
+      margin-bottom: 0.5rem;
+      font-weight: 600;
+    }
+
+    .co-badge {
+      display: inline-block;
+      padding: 3px 10px;
+      border-radius: 100px;
+      font-size: 0.68rem;
+      font-weight: 600;
+      letter-spacing: 0.04em;
+    }
+
+    .co-google {
+      background: rgba(66, 133, 244, 0.1);
+      color: #1A5DC8;
+      border: 1px solid rgba(66, 133, 244, 0.25)
+    }
+
+    .co-mandiant {
+      background: rgba(184, 118, 26, 0.1);
+      color: #956012;
+      border: 1px solid rgba(184, 118, 26, 0.25)
+    }
+
+    .co-mcafee {
+      background: rgba(14, 123, 114, 0.1);
+      color: var(--teal);
+      border: 1px solid var(--teal-border)
+    }
+
+    .exp-role {
+      font-weight: 600;
+      font-size: 1rem;
+      color: var(--text);
+      margin-bottom: 1rem
+    }
+
+    .exp-bullets {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 0.65rem
+    }
+
+    .exp-bullets li {
+      font-size: 0.9rem;
+      color: var(--text2);
+      padding-left: 1.2rem;
+      position: relative;
+      line-height: 1.7;
+      font-weight: 300;
+    }
+
+    .exp-bullets li::before {
+      content: '';
+      position: absolute;
+      left: 0;
+      top: 0.7em;
+      width: 5px;
+      height: 1.5px;
+      background: var(--amber);
+    }
+
+    /* ── CONTACT ── */
+
+    .contact-section {
+      padding: 6rem 4rem;
+      display: grid;
+      grid-template-columns:
+        minmax(0, 1.1fr) minmax(340px, 420px);
+      gap: 5rem;
+      align-items: center;
+      background: transparent;
+      border-bottom: 1px solid var(--border);
+      position: relative;
+    }
+
+    .contact-pre {
+      font-size: 0.7rem;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: var(--amber);
+      margin-bottom: 1.25rem;
+      font-weight: 600;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .contact-pre::before {
+      content: '';
+      width: 28px;
+      height: 1.5px;
+      background: var(--amber);
+      opacity: 0.7
+    }
+
+    .contact-left h2 {
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(1.8rem, 3vw, 2.5rem);
+      font-weight: 700;
+      letter-spacing: -0.02em;
+      line-height: 1.2;
+      font-style: italic;
+      margin-bottom: 1rem;
+      color: var(--text);
+    }
+
+    .contact-left p {
+      font-size: 0.93rem;
+      color: var(--text2);
+      line-height: 1.8;
+      font-weight: 300
+    }
+
+    .contact-right {
+      display: flex;
+      flex-direction: column;
+      gap: 0.75rem
+    }
+
+    .contact-link {
+      display: flex;
+      align-items: center;
+      gap: 1.25rem;
+      padding: 1.1rem 1.4rem;
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: var(--r);
+      text-decoration: none;
+      color: var(--text);
+      transition: border-color 0.2s, box-shadow 0.2s, transform 0.15s;
+    }
+
+    .contact-link:hover {
+      transform: translateX(6px);
+      border-color: rgba(78, 168, 255, 0.25);
+      background: rgba(255, 255, 255, 0.05);
+      box-shadow:
+        0 10px 30px rgba(0, 0, 0, 0.3),
+        0 0 20px rgba(78, 168, 255, 0.08);
+    }
+
+    .contact-link-icon {
+      width: 38px;
+      height: 38px;
+      border-radius: 9px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+    }
+
+    .contact-link-icon svg {
+      width: 17px;
+      height: 17px;
+      fill: none;
+      stroke-width: 1.8
+    }
+
+    .cl-email .contact-link-icon {
+      background: var(--amber-bg);
+      border: 1px solid var(--amber-border)
+    }
+
+    .cl-email .contact-link-icon svg {
+      stroke: var(--amber)
+    }
+
+    .cl-linkedin .contact-link-icon {
+      background: rgba(30, 48, 84, 0.08);
+      border: 1px solid var(--navy-border)
+    }
+
+    .cl-linkedin .contact-link-icon svg {
+      stroke: var(--navy)
+    }
+
+    .cl-github .contact-link-icon {
+      background: var(--bg3);
+      border: 1px solid var(--border2)
+    }
+
+    .cl-github .contact-link-icon svg {
+      stroke: var(--text2)
+    }
+
+    .contact-link-label {
+      font-size: 0.67rem;
+      color: var(--text3);
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      display: block;
+      margin-bottom: 2px;
+      font-weight: 500
+    }
+
+    .contact-link-val {
+      font-size: 0.88rem;
+      font-weight: 600;
+      color: var(--text)
+    }
+
+    /* ── FOOTER ── */
+    footer {
+      padding: 1.5rem 3rem;
+      border-top: 1px solid var(--border);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background: var(--surface);
+    }
+
+    footer p {
+      font-size: 0.75rem;
+      color: var(--text3)
+    }
+
+    /* ── ABOUT PAGE ── */
+    .about-page {
+      padding: 4rem 3rem 6rem;
+      max-width: 1000px;
+      margin: 0 auto
+    }
+
+    .about-grid {
+      display: grid;
+      grid-template-columns: 260px 1fr;
+      gap: 4rem;
+      align-items: start;
+      margin-top: 3rem
+    }
+
+    .about-photo-wrap {
+      aspect-ratio: 1;
+      border-radius: var(--r2);
+      border: 1px solid var(--border);
+      overflow: hidden;
+      margin-bottom: 1.75rem;
+      background: var(--bg3);
+      position: relative;
+    }
+
+    .about-photo-wrap img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+    }
+
+    .about-avatar-fallback {
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(135deg, var(--navy-bg), rgba(30, 48, 84, 0.15));
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-family: 'Playfair Display', serif;
+      font-size: 4rem;
+      font-style: italic;
+      color: var(--navy);
+    }
+
+    .about-contact-list {
+      display: flex;
+      flex-direction: column;
+      gap: 0.7rem
+    }
+
+    .about-contact-item {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      font-size: 0.83rem;
+      color: var(--text2);
+    }
+
+    .about-contact-item svg {
+      width: 14px;
+      height: 14px;
+      stroke: var(--text3);
+      fill: none;
+      stroke-width: 1.8;
+      flex-shrink: 0
+    }
+
+    .about-contact-item a {
+      color: var(--navy);
+      text-decoration: none;
+      font-weight: 500
+    }
+
+    .about-contact-item a:hover {
+      color: var(--amber)
+    }
+
+    .cert-row {
+      display: flex;
+      gap: 0.5rem;
+      flex-wrap: wrap;
+      margin-top: 1.5rem
+    }
+
+    .cert-badge {
+      padding: 4px 12px;
+      border-radius: 100px;
+      font-size: 0.72rem;
+      font-weight: 600;
+      background: var(--amber-bg);
+      color: var(--amber);
+      border: 1px solid var(--amber-border);
+    }
+
+    .about-main h2 {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.45rem;
+      font-weight: 600;
+      letter-spacing: -0.01em;
+      font-style: italic;
+      margin-bottom: 0.9rem;
+      color: var(--text);
+      border-bottom: 1px solid var(--border);
+      padding-bottom: 0.6rem;
+    }
+
+    .about-main h2.mt {
+      margin-top: 2.5rem
+    }
+
+    .about-main p {
+      font-size: 0.95rem;
+      color: var(--text2);
+      line-height: 1.85;
+      margin-bottom: 0.85rem;
+      font-weight: 300
+    }
+
+    .about-main strong {
+      color: var(--text);
+      font-weight: 600
+    }
+
+    /* ── PAGE HERO ── */
+    .page-hero {
+      padding: 4rem 3rem 3rem;
+      border-bottom: 1px solid var(--border);
+      background: var(--surface);
+    }
+
+    .page-eyebrow {
+      font-size: 0.7rem;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: var(--amber);
+      margin-bottom: 1.25rem;
+      font-weight: 600;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .page-eyebrow::before {
+      content: '';
+      width: 24px;
+      height: 1.5px;
+      background: var(--amber);
+      opacity: 0.7
+    }
+
+    .page-title {
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(2.5rem, 5vw, 4rem);
+      font-weight: 700;
+      letter-spacing: -0.02em;
+      line-height: 1.05;
+      margin-bottom: 1rem;
+      color: var(--text);
+    }
+
+    .page-title em {
+      font-style: italic;
+      color: var(--navy)
+    }
+
+    .page-desc {
+      font-size: 0.97rem;
+      color: var(--text2);
+      line-height: 1.8;
+      font-weight: 300;
+      max-width: 600px
+    }
+
+    /* ── PROJECT CARDS ── */
+    .projects-grid {
+      padding: 2.5rem 3rem 5rem;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1.25rem;
+      background: transparent;
+    }
+
+    .project-card {
+      background: rgba(255, 255, 255, 0.04);
+      backdrop-filter: blur(14px);
+      border: 1px solid rgba(255, 255, 255, 0.08);
+      border-radius: 28px;
+      overflow: hidden;
+      cursor: pointer;
+      transition:
+        transform 0.35s ease,
+        border-color 0.35s ease,
+        box-shadow 0.35s ease,
+        background 0.35s ease;
+      text-decoration: none;
+      color: inherit;
+    }
+
+    .project-card:hover {
+      transform: translateY(-10px);
+
+      border-color: rgba(78, 168, 255, 0.28);
+
+      background: rgba(255, 255, 255, 0.06);
+
+      box-shadow:
+        0 30px 60px rgba(0, 0, 0, 0.45),
+        0 0 30px rgba(78, 168, 255, 0.12);
+    }
+
+    .project-card-visual {
+      height: 180px;
+      position: relative;
+      overflow: hidden;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .project-card-visual.bike {
+      background: linear-gradient(135deg, #D4EDE8 0%, #A8D5CD 60%, #7ABFB6 100%)
+    }
+
+    .project-card-visual.revenue {
+      background: linear-gradient(135deg, #F5EBD6 0%, #E8D4A8 60%, #CDBA7A 100%)
+    }
+
+    .project-card-visual.etl {
+      background: linear-gradient(135deg, #D6E0F0 0%, #A8BDE0 60%, #7A9DC8 100%)
+    }
+
+    .project-card-visual.product {
+      background: linear-gradient(135deg, #E8D6F0 0%, #D0A8E0 60%, #B07AC8 100%)
+    }
+
+    .project-card-visual.airlines {
+      background: linear-gradient(135deg, #dbeafe 0%, #bfdbfe 55%, #93c5fd 100%)
+    }
+
+    .project-card-visual.youtube {
+      background: linear-gradient(135deg, #f3e8ff 0%, #e9d5ff 55%, #d8b4fe 100%);
+    }
+
+    /*.visual-icon{
+  width:60px;height:60px;border-radius:14px;
+  border:1px solid rgba(255,255,255,0.5);
+  display:flex;align-items:center;justify-content:center;
+  background:rgba(255,255,255,0.4);backdrop-filter:blur(4px);
+} */
+
+    .visual-icon {
+      width: 96px;
+      height: 96px;
+      border-radius: 28px;
+      border: 1px solid rgba(255, 255, 255, 0.45);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: rgba(255, 255, 255, 0.22);
+      backdrop-filter: blur(8px);
+      box-shadow: 0 10px 30px rgba(255, 255, 255, 0.12);
+      transition:
+        transform 0.3s ease,
+        box-shadow 0.3s ease;
+    }
+
+    .visual-icon svg {
+      width: 38px;
+      height: 38px;
+      fill: none;
+      stroke-linecap: round;
+      stroke-linejoin: round;
+      transition: transform 0.3s ease
+    }
+
+    .project-card-visual.airlines svg {
+      fill: #2563eb;
+      stroke: none;
+    }
+
+    .project-card-body {
+      padding: 1.4rem;
+      border-top: 1px solid var(--border)
+    }
+
+    .project-card-tag {
+      font-size: 0.68rem;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--text3);
+      margin-bottom: 0.5rem;
+      font-weight: 600
+    }
+
+    .project-card-name {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.15rem;
+      font-weight: 600;
+      letter-spacing: -0.01em;
+      margin-bottom: 0.5rem;
+      color: var(--text);
+    }
+
+    .project-card-desc {
+      font-size: 0.83rem;
+      color: var(--text2);
+      line-height: 1.65;
+      font-weight: 300
+    }
+
+    .project-card-footer {
+      padding: 0.9rem 1.4rem;
+      border-top: 1px solid var(--border);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background: var(--bg);
+    }
+
+    .project-status-done {
+      padding: 3px 10px;
+      border-radius: 100px;
+      font-size: 0.68rem;
+      font-weight: 600;
+      letter-spacing: 0.04em;
+      background: var(--teal-bg);
+      color: var(--teal);
+      border: 1px solid var(--teal-border);
+    }
+
+    .project-status-wip {
+      padding: 3px 10px;
+      border-radius: 100px;
+      font-size: 0.68rem;
+      font-weight: 600;
+      background: var(--bg3);
+      color: var(--text3);
+      border: 1px solid var(--border);
+    }
+
+    .project-arrow {
+      color: var(--text3);
+      font-size: 1rem;
+      transition: transform 0.2s, color 0.2s
+    }
+
+    .project-card:hover .project-arrow {
+      transform: translateX(5px);
+      color: var(--amber)
+    }
+
+    /* ── CASE STUDY ── */
+    .case-back-bar{
+      padding:1rem 3rem;
+      border-bottom:1px solid var(--border);
+      background:rgba(7,17,31,0.96);
+      backdrop-filter:blur(14px);
+      position:sticky;
+      top:70px;
+      z-index:999;
+      display:flex;
+      align-items:center;
+      min-height:72px;
+    }
+
+    .case-back-btn {
+      font-size: 0.82rem;
+      color: var(--text2);
+      cursor: pointer;
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: none;
+      border: none;
+      font-family: inherit;
+      padding: 0;
+      transition: color 0.2s;
+      font-weight: 500;
+    }
+
+    .case-back-btn:hover {
+      color: var(--navy)
+    }
+
+    .case-back-btn svg {
+      width: 14px;
+      height: 14px;
+      stroke: currentColor;
+      fill: none;
+      stroke-width: 2
+    }
+
+    .cs-hero {
+      padding: 4rem 3rem 3.5rem;
+      border-bottom: 1px solid var(--border);
+      background: var(--surface);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .cs-hero::after {
+      content: '';
+      position: absolute;
+      right: -80px;
+      top: -80px;
+      width: 400px;
+      height: 400px;
+      border-radius: 50%;
+      background: radial-gradient(circle, var(--teal-bg) 0%, transparent 65%);
+      pointer-events: none;
+    }
+
+    .cs-label {
+      font-size: 0.7rem;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: var(--teal);
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      margin-bottom: 1.25rem;
+      font-weight: 600;
+    }
+
+    .cs-label::before {
+      content: '';
+      width: 24px;
+      height: 1.5px;
+      background: var(--teal);
+      opacity: 0.7
+    }
+
+    .cs-title {
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(2.5rem, 5vw, 4rem);
+      font-weight: 700;
+      letter-spacing: -0.02em;
+      line-height: 1.05;
+      margin-bottom: 1.25rem;
+      color: var(--text);
+    }
+
+    .cs-title em {
+      font-style: italic;
+      color: var(--teal)
+    }
+
+    .cs-subtitle {
+      font-size: 1rem;
+      color: var(--text2);
+      max-width: 580px;
+      line-height: 1.8;
+      margin-bottom: 2.5rem;
+      font-weight: 300
+    }
+
+    .cs-meta-row {
+      display: flex;
+      gap: 2.5rem;
+      flex-wrap: wrap;
+      padding-top: 1.75rem;
+      border-top: 1px solid var(--border);
+    }
+
+    .cs-meta-label {
+      font-size: 0.68rem;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--text3);
+      margin-bottom: 0.25rem;
+      display: block;
+      font-weight: 600
+    }
+
+    .cs-meta-val {
+      font-size: 0.88rem;
+      font-weight: 600;
+      color: var(--text)
+    }
+
+    /* ── CASE STUDY BODY ── */
+    .cs-body {
+      max-width: 820px;
+      padding: 0 3rem 6rem;
+      background: var(--bg)
+    }
+
+    .cs-section {
+      margin-bottom: 4rem;
+      padding-top: 3.5rem
+    }
+
+    .cs-section-header {
+      display: flex;
+      align-items: baseline;
+      gap: 1rem;
+      margin-bottom: 1.75rem;
+      border-bottom: 2px solid var(--border);
+      padding-bottom: 1rem
+    }
+
+    .cs-num {
+      font-family: 'Playfair Display', serif;
+      font-size: 2.5rem;
+      font-style: italic;
+      color: var(--border2);
+      line-height: 1;
+      flex-shrink: 0;
+      font-weight: 600;
+    }
+
+    .cs-section-title {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.65rem;
+      font-weight: 700;
+      letter-spacing: -0.02em;
+      color: var(--text)
+    }
+
+    .cs-p {
+      font-size: 0.95rem;
+      color: var(--text2);
+      line-height: 1.85;
+      margin-bottom: 1.15rem;
+      font-weight: 300
+    }
+
+    .cs-stat-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+      gap: 1rem;
+      margin: 1.75rem 0;
+    }
+
+    .cs-stat-cell {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: var(--r2);
+      padding: 1.5rem;
+      transition: box-shadow 0.2s, transform 0.2s;
+    }
+
+    .cs-stat-cell:hover {
+      box-shadow: 0 6px 20px rgba(30, 48, 84, 0.08);
+      transform: translateY(-2px)
+    }
+
+    .cs-stat-big {
+      font-family: 'Playfair Display', serif;
+      font-size: 2.2rem;
+      letter-spacing: -0.04em;
+      font-weight: 700;
+      color: var(--navy);
+      display: block;
+      line-height: 1;
+      margin-bottom: 0.25rem
+    }
+
+    .cs-stat-big em {
+      font-style: italic;
+      color: var(--teal)
+    }
+
+    .cs-stat-label {
+      font-size: 0.7rem;
+      color: var(--text3);
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      font-weight: 500
+    }
+
+    .tag-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 7px;
+      margin: 1.25rem 0
+    }
+
+    .tag {
+      padding: 4px 13px;
+      border-radius: 100px;
+      font-size: 0.75rem;
+      font-weight: 600;
+      border: 1px solid
+    }
+
+    .tag-teal {
+      background: var(--teal-bg);
+      color: var(--teal);
+      border-color: var(--teal-border)
+    }
+
+    .tag-gold {
+      background: var(--amber-bg);
+      color: var(--amber);
+      border-color: var(--amber-border)
+    }
+
+    .tag-gray {
+      background: var(--bg3);
+      color: var(--text2);
+      border-color: var(--border)
+    }
+
+    .cs-process {
+      list-style: none;
+      position: relative;
+      margin: 1.75rem 0
+    }
+
+    .cs-process::before {
+      content: '';
+      position: absolute;
+      left: 16px;
+      top: 0;
+      bottom: 0;
+      width: 1px;
+      background: var(--border)
+    }
+
+    .cs-process-item {
+      display: flex;
+      gap: 1.5rem;
+      padding-bottom: 2rem
+    }
+
+    .cs-process-dot {
+      width: 33px;
+      height: 33px;
+      border-radius: 50%;
+      background: var(--surface);
+      border: 1.5px solid var(--teal-border);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-family: 'Playfair Display', serif;
+      font-size: 0.88rem;
+      font-style: italic;
+      color: var(--teal);
+      flex-shrink: 0;
+      position: relative;
+      z-index: 1;
+      font-weight: 600;
+    }
+
+    .cs-process-title {
+      font-weight: 600;
+      font-size: 0.93rem;
+      color: var(--text);
+      margin-bottom: 0.3rem
+    }
+
+    .cs-process-desc {
+      font-size: 0.87rem;
+      color: var(--text2);
+      line-height: 1.7;
+      margin: 0;
+      font-weight: 300
+    }
+
+    .cs-process-content {
+      padding-top: 4px
+    }
+
+    .cs-findings {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1rem;
+      margin: 1.75rem 0
+    }
+
+    .cs-finding {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: var(--r);
+      padding: 1.4rem;
+      position: relative;
+      overflow: hidden;
+      transition: box-shadow 0.2s;
+    }
+
+    .cs-finding:hover {
+      box-shadow: 0 4px 16px rgba(30, 48, 84, 0.08)
+    }
+
+    .cs-finding::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 3px
+    }
+
+    .cs-finding.teal::before {
+      background: var(--teal)
+    }
+
+    .cs-finding.gold::before {
+      background: var(--amber)
+    }
+
+    .cs-finding.red::before {
+      background: var(--red)
+    }
+
+    .cs-finding.blue::before {
+      background: var(--blue)
+    }
+
+    .cs-finding-icon {
+      font-size: 1.3rem;
+      display: block;
+      margin-bottom: 0.55rem
+    }
+
+    .cs-finding-title {
+      font-weight: 600;
+      font-size: 0.92rem;
+      color: var(--text);
+      margin-bottom: 0.35rem;
+      line-height: 1.3
+    }
+
+    .cs-finding-body {
+      font-size: 0.84rem;
+      color: var(--text2);
+      line-height: 1.65;
+      margin: 0;
+      font-weight: 300
+    }
+
+    .cs-callout {
+      background: var(--teal-bg);
+      border-left: 3px solid var(--teal);
+      border-radius: 0 var(--r) var(--r) 0;
+      padding: 1.25rem 1.5rem;
+      margin: 1.75rem 0;
+    }
+
+    .cs-callout-label {
+      font-size: 0.68px;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--teal);
+      font-weight: 600;
+      margin-bottom: 0.4rem;
+      font-size: 0.68rem
+    }
+
+    .cs-callout p {
+      font-size: 0.92rem;
+      color: var(--text);
+      line-height: 1.75;
+      margin: 0;
+      font-weight: 300
+    }
+
+    .cs-model-table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 0.9rem;
+      margin: 1.5rem 0;
+      background: var(--surface);
+      border-radius: var(--r);
+      overflow: hidden;
+      border: 1px solid var(--border)
+    }
+
+    .cs-model-table th {
+      text-align: left;
+      padding: 0.7rem 1rem;
+      font-size: 0.7rem;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--text3);
+      font-weight: 600;
+      border-bottom: 1px solid var(--border);
+      background: var(--bg2)
+    }
+
+    .cs-model-table td {
+      padding: 0.9rem 1rem;
+      border-bottom: 1px solid var(--border);
+      color: var(--text2);
+      vertical-align: top;
+      font-weight: 300
+    }
+
+    .cs-model-table tr:last-child td {
+      border-bottom: none
+    }
+
+    .cs-model-table tr td:first-child {
+      font-weight: 600;
+      color: var(--text)
+    }
+
+    .cs-badge {
+      display: inline-block;
+      padding: 2px 8px;
+      border-radius: 100px;
+      font-size: 0.68rem;
+      font-weight: 600
+    }
+
+    .cs-badge-teal {
+      background: var(--teal-bg);
+      color: var(--teal);
+      border: 1px solid var(--teal-border)
+    }
+
+    .cs-rec-list {
+      display: flex;
+      flex-direction: column;
+      gap: 0.85rem;
+      margin: 1.75rem 0
+    }
+
+    .cs-rec {
+      display: flex;
+      gap: 1.25rem;
+      align-items: flex-start;
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: var(--r);
+      padding: 1.25rem 1.5rem;
+      transition: box-shadow 0.2s
+    }
+
+    .cs-rec:hover {
+      box-shadow: 0 4px 16px rgba(30, 48, 84, 0.08)
+    }
+
+    .cs-rec-num {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.4rem;
+      font-style: italic;
+      color: var(--teal);
+      flex-shrink: 0;
+      width: 22px;
+      line-height: 1;
+      padding-top: 2px;
+      font-weight: 700
+    }
+
+    .cs-rec-text {
+      font-size: 0.9rem;
+      color: var(--text2);
+      line-height: 1.65;
+      font-weight: 300
+    }
+
+    .cs-rec-text strong {
+      color: var(--text);
+      font-weight: 600;
+      display: block;
+      margin-bottom: 0.15rem
+    }
+
+    .cs-limit-row {
+      display: flex;
+      gap: 1rem;
+      flex-wrap: wrap;
+      margin: 1.5rem 0
+    }
+
+    .cs-limit {
+      flex: 1;
+      min-width: 180px;
+      background: var(--amber-bg);
+      border: 1px solid var(--amber-border);
+      border-radius: var(--r);
+      padding: 1.25rem
+    }
+
+    .cs-limit-title {
+      font-weight: 600;
+      font-size: 0.87rem;
+      color: var(--amber);
+      margin-bottom: 0.3rem
+    }
+
+    .cs-limit-body {
+      font-size: 0.83rem;
+      color: var(--text2);
+      line-height: 1.6;
+      margin: 0;
+      font-weight: 300
+    }
+
+    .cs-stack-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(110px, 1fr));
+      gap: 1rem;
+      margin: 1.5rem 0
+    }
+
+    .cs-stack-cell {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: var(--r);
+      padding: 1.1rem;
+      text-align: center;
+      transition: box-shadow 0.2s
+    }
+
+    .cs-stack-cell:hover {
+      box-shadow: 0 4px 12px rgba(30, 48, 84, 0.08)
+    }
+
+    .cs-stack-name {
+      font-weight: 600;
+      font-size: 0.85rem;
+      color: var(--text);
+      display: block;
+      margin-bottom: 0.2rem
+    }
+
+    .cs-stack-role {
+      font-size: 0.71rem;
+      color: var(--text3)
+    }
+
+    .cs-chart {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: var(--r);
+      padding: 1.75rem;
+      margin: 1.75rem 0
+    }
+
+    .cs-chart-title {
+      font-size: 0.7rem;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--text3);
+      margin-bottom: 1.5rem;
+      font-weight: 600
+    }
+
+    .bar-chart {
+      display: flex;
+      flex-direction: column;
+      gap: 10px
+    }
+
+    .bar-row {
+      display: flex;
+      align-items: center;
+      gap: 10px
+    }
+
+    .bar-lbl {
+      font-size: 0.74rem;
+      color: var(--text2);
+      width: 110px;
+      flex-shrink: 0;
+      text-align: right;
+      line-height: 1.3;
+      font-weight: 400
+    }
+
+    .bar-track {
+      flex: 1;
+      height: 26px;
+      background: var(--bg3);
+      border-radius: 5px;
+      overflow: hidden
+    }
+
+    .bar-fill {
+      height: 100%;
+      border-radius: 5px;
+      display: flex;
+      align-items: center;
+      padding-left: 10px;
+      font-size: 0.72rem;
+      font-weight: 600;
+      color: rgba(255, 255, 255, 0.9)
+    }
+
+    .bar-fill.teal {
+      background: linear-gradient(90deg, var(--teal), rgba(14, 123, 114, 0.6))
+    }
+
+    .bar-fill.gold {
+      background: linear-gradient(90deg, var(--amber), rgba(184, 118, 26, 0.6))
+    }
+
+    .bar-val {
+      font-size: 0.72rem;
+      color: var(--text3);
+      width: 55px;
+      flex-shrink: 0;
+      font-weight: 500
+    }
+
+    /* ── BTN GOLD (repurposed) ── */
+    .btn-gold {
+      background: var(--navy);
+      color: #FFF;
+      padding: 12px 26px;
+      border-radius: 100px;
+      font-size: 0.88rem;
+      font-weight: 600;
+      border: none;
+      cursor: pointer;
+      font-family: inherit;
+      transition: background 0.2s, transform 0.15s;
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .btn-gold:hover {
+      background: var(--navy2);
+      transform: translateY(-2px)
+    }
+
+    /* ── CONTACT PAGE ── */
+    #page-contact .page-hero {
+      background: var(--surface)
+    }
+
+    #page-contact .page-title em {
+      color: var(--navy)
+    }
+
+    /* ── ANIMATIONS ── */
+    @keyframes fadeUp {
+      from {
+        opacity: 0;
+        transform: translateY(16px)
+      }
+
+      to {
+        opacity: 1;
+        transform: translateY(0)
+      }
+    }
+
+    .hero-left>* {
+      animation: fadeUp 0.6s cubic-bezier(0.22, 1, 0.36, 1) both
+    }
+
+    .hero-left>*:nth-child(1) {
+      animation-delay: 0.1s
+    }
+
+    .hero-left>*:nth-child(2) {
+      animation-delay: 0.18s
+    }
+
+    .hero-left>*:nth-child(3) {
+      animation-delay: 0.26s
+    }
+
+    .hero-left>*:nth-child(4) {
+      animation-delay: 0.34s
+    }
+
+    .hero-left>*:nth-child(5) {
+      animation-delay: 0.42s
+    }
+
+    .stat-card {
+      animation: fadeUp 0.6s cubic-bezier(0.22, 1, 0.36, 1) both
+    }
+
+    .hero-right .stat-card:nth-child(1) {
+      animation-delay: 0.5s
+    }
+
+    .hero-right .stat-card:nth-child(2) {
+      animation-delay: 0.58s
+    }
+
+    .hero-right .stat-card:nth-child(3) {
+      animation-delay: 0.66s
+    }
+
+    .hero-right .stat-card:nth-child(4) {
+      animation-delay: 0.74s
+    }
+
+    /* PREMIUM GLASS EFFECT */
+    .skill-cell,
+    .stat-card,
+    .project-card,
+    .contact-link,
+    .cs-stat-cell,
+    .cs-finding,
+    .cs-rec,
+    .cs-limit,
+    .cs-stack-cell,
+    .cs-chart {
+      position: relative;
+    }
+
+    .skill-cell::before,
+    .stat-card::before,
+    .project-card::before,
+    .contact-link::before,
+    .cs-stat-cell::before,
+    .cs-finding::before,
+    .cs-rec::before,
+    .cs-limit::before,
+    .cs-stack-cell::before,
+    .cs-chart::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+
+      background: linear-gradient(135deg,
+          rgba(255, 255, 255, 0.08),
+          transparent 45%);
+
+      pointer-events: none;
+    }
+
+    /* ── RESPONSIVE ── */
+    @media(max-width:960px) {
+      .home-hero {
+        grid-template-columns: 1fr
+      }
+
+      .hero-right {
+        border-top: 1px solid var(--border);
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 1rem;
+        padding: 2rem
+      }
+
+      .stat-cards-label {
+        grid-column: 1/-1
+      }
+
+      .manifesto {
+        grid-template-columns: 1fr;
+        gap: 2rem
+      }
+
+      .skills-grid {
+        grid-template-columns: repeat(2, 1fr)
+      }
+
+      .exp-item {
+        grid-template-columns: 1fr;
+        gap: 0.75rem
+      }
+
+      .contact-section {
+        grid-template-columns: 1fr
+      }
+
+      .about-grid {
+        grid-template-columns: 1fr
+      }
+
+      .nav-links {
+        display: none
+      }
+
+      .projects-grid {
+        grid-template-columns: 1fr
+      }
+    }
+
+    @media(max-width:640px) {
+
+      nav,
+      .hero-left,
+      .hero-right,
+      .manifesto,
+      .skills-section,
+      .experience-section,
+      .contact-section,
+      footer,
+      .about-page,
+      .page-hero,
+      .projects-grid,
+      .cs-hero,
+      .cs-body,
+      .case-back-bar {
+        padding-left: 1.5rem;
+        padding-right: 1.5rem;
+      }
+
+      .skills-grid {
+        grid-template-columns: 1fr
+      }
+
+      .cs-findings {
+        grid-template-columns: 1fr
+      }
+
+      .section-nav {
+        padding: 0 1.5rem
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- NAV -->
+  <nav>
+    <span class="nav-logo" onclick="showPage('home')">
+      <span class="nav-logo-dot"></span>
+      Dilshad Yousuff
+    </span>
+    <div class="nav-links">
+      <a onclick="showPage('home')" id="nav-home" class="active">Home</a>
+      <a onclick="showPage('about')" id="nav-about">About</a>
+      <a onclick="showPage('projects')" id="nav-projects">Projects</a>
+    </div>
+    <button class="nav-cta" onclick="showPage('contact')">Get in Touch</button>
+  </nav>
+
+  <!-- ═══ HOME ═══ -->
+  <div id="page-home" class="page active">
+
+    <!-- SECTION JUMP LINKS -->
+    <div class="section-nav">
+      <a href="#sec-hero" onclick="scrollToSection('sec-hero')">Overview</a>
+      <a href="#sec-skills" onclick="scrollToSection('sec-skills')">Skills</a>
+      <a href="#sec-experience" onclick="scrollToSection('sec-experience')">Experience</a>
+      <a href="#sec-contact" onclick="scrollToSection('sec-contact')">Contact</a>
+    </div>
+
+    <!-- HERO -->
+    <section class="home-hero" id="sec-hero">
+      <div class="hero-left">
+        <span class="hero-eyebrow">
+          <span class="hero-eyebrow-line"></span>
+          BI &amp; Analytics Leader · 20+ Years
+        </span>
+        <h1 class="hero-name">
+          Dilshad
+          <span class="hero-name-accent">Yousuff</span>
+        </h1>
+        <p class="hero-title">Turning data into decisions for enterprises that matter.</p>
+        <p class="hero-desc">
+          Business Intelligence Manager and Revenue Analytics leader with deep expertise in
+          <strong>Power BI, Looker, BigQuery,</strong> and <strong>Python</strong>.
+          Previously at <strong>Google Cloud, Mandiant,</strong> and <strong>McAfee</strong> —
+          building the ecosystems executives rely on.
+        </p>
+        <div class="hero-actions">
+          <button class="btn-primary" onclick="showPage('projects')">
+            View Case Studies
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+              <path d="M5 12h14M12 5l7 7-7 7" />
+            </svg>
+          </button>
+
+          <button class="btn-ghost" onclick="showPage('about')">
+            About Me
+          </button>
+
+          <a href="resume.pdf" download class="btn-ghost resume-btn">
+            Download Resume
+          </a>
+
+        </div>
+      </div>
+
+      <!-- STAT CARDS -->
+      <div class="hero-right">
+        <p class="stat-cards-label">By the Numbers</p>
+        <div class="stat-card">
+          <span class="stat-big">20<em>+</em></span>
+          <p class="stat-desc">Years delivering actionable BI across Finance, Product, and Sales</p>
+        </div>
+        <div class="stat-card">
+          <span class="stat-big">1<em>k+</em></span>
+          <p class="stat-desc">Global users on Looker dashboards built at Google Cloud</p>
+        </div>
+        <div class="stat-card">
+          <span class="stat-big">40<em>%</em></span>
+          <p class="stat-desc">Query performance improvement via BigQuery optimisation</p>
+        </div>
+        <div class="stat-card">
+          <span class="stat-big">60<em>%</em></span>
+          <p class="stat-desc">Reduction in dashboard refresh time at Mandiant</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- TICKER -->
+    <div class="marquee-strip">
+      <div class="marquee-inner">
+        <span>Power BI</span><span class="accent">·</span>
+        <span>Looker</span><span class="accent">·</span>
+        <span>BigQuery</span><span class="accent">·</span>
+        <span>Python</span><span class="accent">·</span>
+        <span>Revenue Analytics</span><span class="accent">·</span>
+        <span>ARR · MRR · NRR</span><span class="accent">·</span>
+        <span>ETL Pipelines</span><span class="accent">·</span>
+        <span>Data Warehousing</span><span class="accent">·</span>
+        <span>SQL</span><span class="accent">·</span>
+        <span>Tableau</span><span class="accent">·</span>
+        <span>Google Cloud Platform</span><span class="accent">·</span>
+        <span>LookML</span><span class="accent">·</span>
+        <span>DAX</span><span class="accent">·</span>
+        <span>Cohort Analysis</span><span class="accent">·</span>
+        <span>Predictive Modelling</span><span class="accent">·</span>
+        <span>Power BI</span><span class="accent">·</span>
+        <span>Looker</span><span class="accent">·</span>
+        <span>BigQuery</span><span class="accent">·</span>
+        <span>Python</span><span class="accent">·</span>
+        <span>Revenue Analytics</span><span class="accent">·</span>
+        <span>ARR · MRR · NRR</span><span class="accent">·</span>
+        <span>ETL Pipelines</span><span class="accent">·</span>
+        <span>Data Warehousing</span><span class="accent">·</span>
+        <span>SQL</span><span class="accent">·</span>
+        <span>Tableau</span><span class="accent">·</span>
+        <span>Google Cloud Platform</span><span class="accent">·</span>
+        <span>LookML</span><span class="accent">·</span>
+        <span>DAX</span><span class="accent">·</span>
+        <span>Cohort Analysis</span><span class="accent">·</span>
+        <span>Predictive Modelling</span><span class="accent">·</span>
+      </div>
+    </div>
+
+    <!-- MANIFESTO -->
+    <div class="manifesto">
+      <div class="manifesto-left">
+        <p class="manifesto-quote">
+          Making complexity <span>legible</span> — for everyone from analyst to C-suite.
+        </p>
+      </div>
+      <div class="manifesto-right">
+        <p>My career sits at the intersection of <strong>engineering precision and business strategy</strong>. I don't
+          just build dashboards — I architect the data ecosystems that make those dashboards trustworthy, scalable, and
+          acted upon.</p>
+        <p>From M&amp;A data integration at Google Cloud to ETL automation that compressed a multi-day process into 30
+          minutes at Mandiant — <strong>my work is defined by impact that survives me</strong>.</p>
+      </div>
+    </div>
+
+    <!-- SKILLS -->
+    <section class="skills-section" id="sec-skills">
+      <p class="section-label"><span class="section-label-dot"></span>Core Capabilities</p>
+      <div class="skills-grid">
+
+        <div class="skill-cell">
+          <div class="skill-icon">
+            <svg viewBox="0 0 24 24">
+              <rect x="3" y="3" width="7" height="7" rx="1" />
+              <rect x="14" y="3" width="7" height="7" rx="1" />
+              <rect x="3" y="14" width="7" height="7" rx="1" />
+              <rect x="14" y="14" width="7" height="7" rx="1" />
+            </svg>
+          </div>
+          <p class="skill-name">BI &amp; Visualisation</p>
+          <p class="skill-tools">Power BI · Looker · Tableau · OBIEE · DAX · LookML</p>
+        </div>
+
+        <div class="skill-cell">
+          <div class="skill-icon">
+            <svg viewBox="0 0 24 24">
+              <polyline points="22 7 13.5 15.5 8.5 10.5 2 17" />
+              <polyline points="16 7 22 7 22 13" />
+            </svg>
+          </div>
+          <p class="skill-name">Revenue Analytics</p>
+          <p class="skill-tools">ARR · MRR · NRR · Churn · Retention · Expansion · Revenue Walk</p>
+        </div>
+
+        <div class="skill-cell">
+          <div class="skill-icon">
+            <svg viewBox="0 0 24 24">
+              <ellipse cx="12" cy="5" rx="9" ry="3" />
+              <path d="M3 5v14a9 3 0 0 0 18 0V5" />
+              <path d="M3 12a9 3 0 0 0 18 0" />
+            </svg>
+          </div>
+          <p class="skill-name">Data Engineering</p>
+          <p class="skill-tools">BigQuery · SQL Server · ETL Pipelines · Datamart Architecture · Data Warehousing</p>
+        </div>
+
+        <div class="skill-cell">
+          <div class="skill-icon">
+            <svg viewBox="0 0 24 24">
+              <polyline points="16 18 22 12 16 6" />
+              <polyline points="8 6 2 12 8 18" />
+            </svg>
+          </div>
+          <p class="skill-name">Programming</p>
+          <p class="skill-tools">SQL · Python · DAX · LookML · Statistical Modelling · Predictive Analytics</p>
+        </div>
+
+        <div class="skill-cell">
+          <div class="skill-icon">
+            <svg viewBox="0 0 24 24">
+              <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" />
+            </svg>
+          </div>
+          <p class="skill-name">Cloud Platforms</p>
+          <p class="skill-tools">Google Cloud Platform · BigQuery · Salesforce · SQL Server</p>
+        </div>
+
+        <div class="skill-cell">
+          <div class="skill-icon">
+            <svg viewBox="0 0 24 24">
+              <circle cx="12" cy="12" r="3" />
+              <path
+                d="M12 1v4M12 19v4M4.22 4.22l2.83 2.83M16.95 16.95l2.83 2.83M1 12h4M19 12h4M4.22 19.78l2.83-2.83M16.95 7.05l2.83-2.83" />
+            </svg>
+          </div>
+          <p class="skill-name">Product Analytics</p>
+          <p class="skill-tools">Funnel Analysis · Cohort Analysis · A/B Testing · Feature Adoption · User Behaviour</p>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- EXPERIENCE -->
+    <section class="experience-section" id="sec-experience">
+      <p class="section-label"><span class="section-label-dot"></span>Experience</p>
+      <div class="exp-list">
+
+        <div class="exp-item">
+          <div class="exp-meta">
+            <p class="exp-period">Nov 2022 – Dec 2025</p>
+            <p class="exp-company">Google Cloud</p>
+            <span class="co-badge co-google">Google</span>
+          </div>
+          <div class="exp-content">
+            <p class="exp-role">Manager, Finance Business Intelligence</p>
+            <ul class="exp-bullets">
+              <li>Led end-to-end revenue analytics and Mandiant post-acquisition data integration into Google Cloud —
+                100% data integrity with zero business continuity disruption.</li>
+              <li>Deployed automated Looker dashboards and self-service BI frameworks tracking enterprise KPIs, adopted
+                by 1,000+ global users.</li>
+              <li>Built a Revenue Walk framework analyzing ARR progression, churn, expansion, and product performance —
+                directly informing QBRs and strategic planning.</li>
+              <li>Optimised BigQuery workloads via query tuning, partitioning, and clustering — improving performance by
+                40%.</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="exp-item">
+          <div class="exp-meta">
+            <p class="exp-period">Dec 2014 – Oct 2022</p>
+            <p class="exp-company">Mandiant</p>
+            <span class="co-badge co-mandiant">formerly FireEye</span>
+          </div>
+          <div class="exp-content">
+            <p class="exp-role">Manager, Strategy &amp; Analytics</p>
+            <ul class="exp-bullets">
+              <li>Built scalable ETL pipelines and centralised datamarts — cutting dashboard refresh times by 60% and
+                establishing a single source of truth across Finance, Sales, and Product.</li>
+              <li>Developed Power BI dashboards delivering real-time visibility into bookings, ARR, retention, and
+                product adoption across the customer lifecycle.</li>
+              <li>Led data governance initiatives during organisational transition, ensuring accuracy of financial,
+                sales, and product data.</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="exp-item">
+          <div class="exp-meta">
+            <p class="exp-period">Jun 2007 – Dec 2014</p>
+            <p class="exp-company">McAfee</p>
+            <span class="co-badge co-mcafee">Intel Security</span>
+          </div>
+          <div class="exp-content">
+            <p class="exp-role">Technical Lead, Reporting &amp; Analytics</p>
+            <ul class="exp-bullets">
+              <li>Delivered BI solutions supporting 200+ global sales reps; executive dashboards drove a 15% improvement
+                in sales conversion.</li>
+              <li>Reduced reporting latency from 4 hours to 15 minutes by automating dashboards and ETL pipelines.</li>
+            </ul>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section id="sec-contact" class="contact-section">
+      <div class="contact-left">
+        <p class="contact-pre">Get in Touch</p>
+        <h2>Let's build something that matters.</h2>
+        <p>Open to senior BI, Data Analytics, and Revenue Analytics leadership roles. Based in Bangalore, India —
+          available for global remote.</p>
+      </div>
+      <div class="contact-right">
+        <a class="contact-link cl-email" href="mailto:yousuffd@gmail.com">
+          <div class="contact-link-icon">
+            <svg viewBox="0 0 24 24">
+              <rect x="2" y="4" width="20" height="16" rx="2" />
+              <polyline points="2,4 12,13 22,4" />
+            </svg>
+          </div>
+          <div>
+            <span class="contact-link-label">Email</span>
+            <span class="contact-link-val">yousuffd@gmail.com</span>
+          </div>
+        </a>
+        <a class="contact-link cl-linkedin" href="https://linkedin.com/in/yousuffd-07b14714" target="_blank">
+          <div class="contact-link-icon">
+            <svg viewBox="0 0 24 24">
+              <rect x="2" y="2" width="20" height="20" rx="3" />
+              <path d="M7 10v7M7 7v.01M12 17v-4a2 2 0 0 1 4 0v4M12 10v7" />
+            </svg>
+          </div>
+          <div>
+            <span class="contact-link-label">LinkedIn</span>
+            <span class="contact-link-val">linkedin.com/in/yousuffd-07b14714</span>
+          </div>
+        </a>
+        <a class="contact-link cl-github" href="https://github.com/yousuffd" target="_blank">
+          <div class="contact-link-icon">
+            <svg viewBox="0 0 24 24">
+              <path
+                d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22" />
+            </svg>
+          </div>
+          <div>
+            <span class="contact-link-label">GitHub</span>
+            <span class="contact-link-val">github.com/yousuffd</span>
+          </div>
+        </a>
+      </div>
+    </section>
+
+    <footer>
+      <p>© 2025 Dilshad Yousuff. All rights reserved.</p>
+      <p>Bangalore, India · Open to global remote</p>
+    </footer>
+
+  </div>
+
+  <!-- ═══ ABOUT ═══ -->
+  <div id="page-about" class="page">
+    <div class="about-page">
+      <div class="page-eyebrow">About</div>
+      <h1 class="page-title">20+ years of<br><em>data, decisions,</em><br>and impact.</h1>
+
+      <div class="about-grid">
+        <!-- LEFT COLUMN: Photo + Contact -->
+        <div>
+          <div class="about-photo-wrap">
+            <!-- Replace the src below with the actual photo URL or file path -->
+            <img src="/Users/dilshad/Desktop/Portfolio Website/My Portfolio/Photo.jpeg" alt="Dilshad Yousuff"
+              onerror="this.style.display='none';this.nextElementSibling.style.display='flex';" />
+            <div class="about-avatar-fallback" style="display:none">DY</div>
+          </div>
+          <div class="about-contact-list">
+            <div class="about-contact-item">
+              <svg viewBox="0 0 24 24">
+                <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z" />
+                <circle cx="12" cy="10" r="3" />
+              </svg>
+              Bangalore, India
+            </div>
+            <div class="about-contact-item">
+              <svg viewBox="0 0 24 24">
+                <path
+                  d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12 19.79 19.79 0 0 1 1.61 3.36 2 2 0 0 1 3.6 1.18h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 8.91a16 16 0 0 0 6 6l.91-.91a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 21.73 16.92z" />
+              </svg>
+              +91 98459 76468
+            </div>
+            <div class="about-contact-item">
+              <svg viewBox="0 0 24 24">
+                <rect x="2" y="4" width="20" height="16" rx="2" />
+                <polyline points="2,4 12,13 22,4" />
+              </svg>
+              <a href="mailto:yousuffd@gmail.com">yousuffd@gmail.com</a>
+            </div>
+            <div class="about-contact-item">
+              <svg viewBox="0 0 24 24">
+                <rect x="2" y="2" width="20" height="20" rx="3" />
+                <path d="M7 10v7M7 7v.01M12 17v-4a2 2 0 0 1 4 0v4M12 10v7" />
+              </svg>
+              <a href="https://linkedin.com/in/yousuffd-07b14714" target="_blank">LinkedIn Profile</a>
+            </div>
+            <div class="about-contact-item">
+              <svg viewBox="0 0 24 24">
+                <path
+                  d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22" />
+              </svg>
+              <a href="https://github.com/yousuffd" target="_blank">github.com/yousuffd</a>
+            </div>
+          </div>
+          <div class="cert-row">
+            <span class="cert-badge">Google Data Analytics</span>
+            <span class="cert-badge">IBM Data Science</span>
+          </div>
+        </div>
+
+        <!-- RIGHT COLUMN: Bio -->
+        <div class="about-main">
+          <h2>Who I am</h2>
+          <p>I'm a Business Intelligence Manager and Data Analytics leader with over two decades of experience turning
+            complex, messy data into clear, trustworthy insights that executives actually act on.</p>
+          <p>My career spans three of the most demanding environments in enterprise tech — <strong>Google Cloud,
+              Mandiant,</strong> and <strong>McAfee</strong> — where I built BI ecosystems from the ground up: data
+            warehouses, ETL pipelines, executive dashboards, and the governance frameworks that keep them reliable.</p>
+
+          <h2 class="mt">What I specialise in</h2>
+          <p>Revenue analytics is my deepest craft. <strong>ARR, MRR, NRR, churn, expansion revenue, retention
+              cohorts</strong> — I've built the models and frameworks that give finance and strategy teams real
+            visibility into what's driving (or eroding) growth.</p>
+          <p>I also lead at the intersection of engineering and business: designing query-optimised BigQuery workloads,
+            building self-service BI that non-technical stakeholders can trust, and managing teams of analysts to
+            deliver work that outlasts any one project.</p>
+
+          <h2 class="mt">Education</h2>
+          <p>Bachelor of Engineering, Electrical &amp; Electronics — <strong>Bangalore University</strong> (1998–2002)
+          </p>
+          <p>I complement that foundation with continuous learning: IBM Data Science and Google Data Analytics
+            certifications reflect my commitment to staying current in a field that moves fast.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ═══ PROJECTS ═══ -->
+  <div id="page-projects" class="page">
+    <div class="page-hero">
+      <div class="page-eyebrow">Case Studies & Projects</div>
+      <h1 class="page-title">Projects &amp;<br><em>Analysis</em></h1>
+      <p class="page-desc">A selection of data analysis, machine learning, and BI work — each built to solve a real
+        problem, not just demonstrate a skill.</p>
+    </div>
+
+    <div class="projects-grid">
+
+      <div class="project-card" onclick="showPage('case-bike')">
+        <div class="project-card-visual bike">
+          <div class="visual-icon" style="border-color:rgba(14,123,114,0.3)">
+            <svg viewBox="0 0 24 24" style="stroke:var(--teal)">
+              <circle cx="5.5" cy="17.5" r="3.5" />
+              <circle cx="18.5" cy="17.5" r="3.5" />
+              <path d="M15 6h-4l-3 8h10" />
+              <path d="M5.5 17.5L12 6" />
+            </svg>
+          </div>
+        </div>
+        <div class="project-card-body">
+          <p class="project-card-tag">EDA · Machine Learning · Python</p>
+          <p class="project-card-name">Bike Sharing Analysis &amp; Demand Prediction</p>
+          <p class="project-card-desc">Exploratory analysis of Divvy trip data to uncover rider behaviour patterns
+            across member and casual segments — plus a Random Forest model to forecast ride demand.</p>
+        </div>
+        <div class="project-card-footer">
+          <span class="project-status-done">Completed</span>
+          <span class="project-arrow">→</span>
+        </div>
+      </div>
+
+      <a class="project-card" onclick="showPage('youtube-case-study')">
+        <div class="project-card-visual youtube">
+          <div class="visual-icon">
+            <svg viewBox="0 0 24 24" style="stroke:#9333ea">
+              <rect x="3" y="6" width="18" height="12" rx="3" />
+              <path d="M10 9l5 3-5 3z" />
+            </svg>
+          </div>
+        </div>
+        <div class="project-card-body">
+          <div class="project-card-tag">
+            Creator Analytics · Audience Intelligence
+          </div>
+          <h3 class="project-card-name">
+            YouTube Channel Analysis
+          </h3>
+          <p class="project-card-desc">
+            Exploratory analytics on creator engagement,
+            subscriber growth, video performance,
+            and audience behaviour trends.
+          </p>
+        </div>
+        <div class="project-card-footer">
+          <span class="project-status-done">
+            Completed
+          </span>
+          <span class="project-arrow">
+            →
+          </span>
+        </div>
+      </a>
+
+
+      <a class="project-card" onclick="showPage('sales-dashboard-case-study')">
+        <div class="project-card-visual revenue">
+          <div class="visual-icon"
+            style="border-color:rgba(78,168,255,0.35)">
+            <svg viewBox="0 0 24 24"
+              style="stroke:var(--navy)">
+              <path d="M4 19h16"/>
+              <path d="M7 16V9"/>
+              <path d="M12 16V5"/>
+              <path d="M17 16v-3"/>
+            </svg>
+          </div>
+        </div>
+        <div class="project-card-body">
+          <p class="project-card-tag">
+            Tableau · Sales Analytics · Executive BI
+          </p>
+          <p class="project-card-name">
+            Sales & Customer Performance Dashboard
+          </p>
+          <p class="project-card-desc">
+            Executive sales intelligence dashboard analysing
+            revenue performance, customer profitability,
+            discount impact, YoY growth, and product trends
+            through interactive Tableau analytics.
+          </p>
+        </div>
+        <div class="project-card-footer">
+          <span class="project-status-done">
+            Completed
+          </span>
+          <span class="project-arrow">
+            →
+          </span>
+        </div>
+      </a>
+      <a class="project-card" onclick="showPage('airlines-case-study')">
+
+        <div class="project-card-visual airlines">
+          <div class="visual-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="#2563eb">
+
+              <path d="M21 16v-2l-8-5V3.5
+                            a1.5 1.5 0 0 0-3 0V9
+                            l-8 5v2l8-2.5V19
+                            l-2 1.5V22l3.5-1
+                            3.5 1v-1.5L13 19v-5.5z" />
+
+            </svg>
+          </div>
+        </div>
+
+        <div class="project-card-body">
+          <div class="project-card-tag">
+            Aviation Analytics · ML
+          </div>
+
+          <h3 class="project-card-name">
+            Airline Operations Analysis
+          </h3>
+          <p class="project-card-desc">
+            Operational analytics and predictive modelling
+            for airline delays, utilisation, fuel efficiency,
+            and passenger intelligence.
+          </p>
+        </div>
+
+        <div class="project-card-footer">
+          <span class="project-status-done">
+            Completed
+          </span>
+          <span class="project-arrow">
+            →
+          </span>
+        </div>
+      </a>
+
+      <!-- <div class="project-card" style="cursor:default;opacity:0.5;pointer-events:none">
+        <div class="project-card-visual product">
+          <div class="visual-icon" style="border-color:rgba(160,120,220,0.3)">
+            <svg viewBox="0 0 24 24" style="stroke:#8855CC">
+              <path d="M3 3h7v7H3zM14 3h7v7h-7zM14 14h7v7h-7zM3 14h7v7H3z" />
+            </svg>
+          </div>
+        </div>
+        <div class="project-card-body">
+          <p class="project-card-tag">Product Analytics · Cohort Analysis · SQL</p>
+          <p class="project-card-name">Product Adoption &amp; Funnel Analytics</p>
+          <p class="project-card-desc">Cohort-level funnel analysis revealing which feature adoption patterns correlate
+            with long-term retention.</p>
+        </div>
+        <div class="project-card-footer">
+          <span class="project-status-wip">Coming Soon</span>
+        </div>
+      </div> -->
+
+    </div>
+  </div>
+
+
+  <!-- ═══ CASE STUDY — BIKE ═══ -->
+  <div id="page-case-bike" class="page">
+    <div class="case-back-bar">
+      <button class="case-back-btn" onclick="showPage('projects')">
+        <svg viewBox="0 0 24 24">
+          <path d="M19 12H5M12 5l-7 7 7 7" />
+        </svg>
+        Back to Projects
+      </button>
+    </div>
+
+    <div class="cs-hero">
+      <div class="cs-label">Case Study · EDA &amp; Machine Learning</div>
+      <h1 class="cs-title">Bike Sharing<br><em>Analysis</em></h1>
+      <p class="cs-subtitle">Exploratory data analysis of 5.7M Divvy trips to uncover rider behaviour patterns between
+        annual members and casual riders — culminating in a Random Forest demand prediction model.</p>
+      <div class="cs-meta-row">
+        <div><span class="cs-meta-label">Dataset</span><span class="cs-meta-val">Divvy Trip Data</span></div>
+        <div><span class="cs-meta-label">Records</span><span class="cs-meta-val">5.7M rows</span></div>
+        <div><span class="cs-meta-label">Stack</span><span class="cs-meta-val">Python · Scikit-learn</span></div>
+        <div><span class="cs-meta-label">Type</span><span class="cs-meta-val">Capstone Project</span></div>
+      </div>
+    </div>
+
+    <div class="cs-body">
+
+      <div class="cs-section">
+        <div class="cs-section-header"><span class="cs-num">01</span>
+          <h2 class="cs-section-title">Business Context</h2>
+        </div>
+        <p class="cs-p">Cyclistic (fictionalised as Divvy) operates a 5,800-bike network across Chicago. The core
+          business challenge: <strong>casual riders generate lower per-trip revenue than annual members</strong>. The
+          analytics goal was to characterise the behavioural differences between the two segments and identify
+          conversion opportunities.</p>
+        <div class="cs-stat-grid">
+          <div class="cs-stat-cell"><span class="cs-stat-big">5.7<em>M</em></span><span class="cs-stat-label">Trip
+              records</span></div>
+          <div class="cs-stat-cell"><span class="cs-stat-big">12</span><span class="cs-stat-label">Months of data</span>
+          </div>
+          <div class="cs-stat-cell"><span class="cs-stat-big">2</span><span class="cs-stat-label">Rider segments</span>
+          </div>
+          <div class="cs-stat-cell"><span class="cs-stat-big">3</span><span class="cs-stat-label">Bike types</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="cs-section">
+        <div class="cs-section-header"><span class="cs-num">02</span>
+          <h2 class="cs-section-title">Data Preparation</h2>
+        </div>
+        <p class="cs-p">Raw data arrived across 12 monthly CSVs, each with identical schema. After concatenation, the
+          cleaning pipeline addressed structural and quality issues before engineering features for analysis.</p>
+        <div class="tag-row">
+          <span class="tag tag-teal">ride_id</span>
+          <span class="tag tag-teal">rideable_type</span>
+          <span class="tag tag-teal">started_at / ended_at</span>
+          <span class="tag tag-teal">start / end station</span>
+          <span class="tag tag-teal">lat / lng coordinates</span>
+          <span class="tag tag-teal">member_casual</span>
+          <span class="tag tag-gold">ride_length ← derived</span>
+          <span class="tag tag-gold">distance_km ← derived</span>
+        </div>
+        <ul class="cs-process">
+          <li class="cs-process-item">
+            <span class="cs-process-dot">1</span>
+            <div class="cs-process-content">
+              <p class="cs-process-title">Handle missing values</p>
+              <p class="cs-process-desc">Null station names and IDs were identified and removed. Records missing
+                geographic coordinates were dropped to preserve distance calculation integrity.</p>
+            </div>
+          </li>
+          <li class="cs-process-item">
+            <span class="cs-process-dot">2</span>
+            <div class="cs-process-content">
+              <p class="cs-process-title">Datetime conversion &amp; validity filtering</p>
+              <p class="cs-process-desc">All timestamps parsed to datetime. Rides with zero or negative duration were
+                excluded as docking artefacts. Outliers at extreme durations (&gt;24 hrs) were capped.</p>
+            </div>
+          </li>
+          <li class="cs-process-item">
+            <span class="cs-process-dot">3</span>
+            <div class="cs-process-content">
+              <p class="cs-process-title">Feature engineering</p>
+              <p class="cs-process-desc">Derived ride_length (minutes), distance_km (via geopy Haversine), plus hour,
+                day_of_week, month, and seasonal aggregates from timestamps.</p>
+            </div>
+          </li>
+        </ul>
+      </div>
+
+      <div class="cs-section">
+        <div class="cs-section-header"><span class="cs-num">03</span>
+          <h2 class="cs-section-title">Exploratory Analysis</h2>
+        </div>
+        <p class="cs-p">EDA revealed distinct behavioural profiles between members and casual riders — a finding with
+          direct implications for fleet allocation and marketing strategy.</p>
+        <div class="cs-findings">
+          <div class="cs-finding teal">
+            <span class="cs-finding-icon">🚴</span>
+            <p class="cs-finding-title">Members ride short, ride often</p>
+            <p class="cs-finding-body">Annual members make frequent, short trips — strong evidence of daily commuting.
+              Peak activity aligns with 8–9 am and 5–6 pm.</p>
+          </div>
+          <div class="cs-finding gold">
+            <span class="cs-finding-icon">🌅</span>
+            <p class="cs-finding-title">Casual riders prefer weekends</p>
+            <p class="cs-finding-body">Casual users take longer, leisure-oriented rides concentrated on Saturday and
+              Sunday. Average duration is nearly 2× that of members.</p>
+          </div>
+          <div class="cs-finding red">
+            <span class="cs-finding-icon">⚡</span>
+            <p class="cs-finding-title">Electric bike adoption rising</p>
+            <p class="cs-finding-body">E-bikes showed consistent month-over-month growth. Casual users
+              disproportionately favour e-bikes vs classic bikes.</p>
+          </div>
+          <div class="cs-finding blue">
+            <span class="cs-finding-icon">📅</span>
+            <p class="cs-finding-title">Clear seasonal demand curve</p>
+            <p class="cs-finding-body">Ride volume peaks June–August and troughs in winter. Member usage is more stable;
+              casual usage is highly seasonal.</p>
+          </div>
+        </div>
+        <div class="cs-chart">
+          <p class="cs-chart-title">Avg. ride duration by segment and day type</p>
+          <div class="bar-chart">
+            <div class="bar-row"><span class="bar-lbl">Members Weekday</span>
+              <div class="bar-track">
+                <div class="bar-fill teal" style="width:28%">~13 min</div>
+              </div><span class="bar-val">Short</span>
+            </div>
+            <div class="bar-row"><span class="bar-lbl">Members Weekend</span>
+              <div class="bar-track">
+                <div class="bar-fill teal" style="width:38%">~18 min</div>
+              </div><span class="bar-val">Moderate</span>
+            </div>
+            <div class="bar-row"><span class="bar-lbl">Casual Weekday</span>
+              <div class="bar-track">
+                <div class="bar-fill gold" style="width:55%">~26 min</div>
+              </div><span class="bar-val">Long</span>
+            </div>
+            <div class="bar-row"><span class="bar-lbl">Casual Weekend</span>
+              <div class="bar-track">
+                <div class="bar-fill gold" style="width:75%">~36 min</div>
+              </div><span class="bar-val">Longest</span>
+            </div>
+          </div>
+        </div>
+        <div class="cs-callout">
+          <p class="cs-callout-label">Key Insight</p>
+          <p>The member vs. casual split is the single most predictive variable — not just for duration, but also
+            station preference, time-of-day demand, and bike type choice. Any operational model should treat these as
+            two entirely separate demand curves.</p>
+        </div>
+      </div>
+
+      <div class="cs-section">
+        <div class="cs-section-header"><span class="cs-num">04</span>
+          <h2 class="cs-section-title">Predictive Modelling</h2>
+        </div>
+        <p class="cs-p">Two regression approaches were benchmarked against the same held-out test set to forecast ride
+          demand using temporal and categorical features.</p>
+        <table class="cs-model-table">
+          <thead>
+            <tr>
+              <th>Model</th>
+              <th>MAE</th>
+              <th>RMSE</th>
+              <th>Notes</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Linear Regression</td>
+              <td>Higher</td>
+              <td>Higher</td>
+              <td>Struggled with non-linear seasonal patterns</td>
+            </tr>
+            <tr>
+              <td>Random Forest <span class="cs-badge cs-badge-teal">Best</span></td>
+              <td>110.47</td>
+              <td>171.39</td>
+              <td>Captured temporal interactions and segment-level variance well</td>
+            </tr>
+          </tbody>
+        </table>
+        <p class="cs-p">Random Forest outperformed linear regression by capturing non-linear interactions between
+          hour-of-day, day-of-week, and user type. The MAE of ~110 seconds (~1.8 min) is operationally useful for
+          redistribution planning.</p>
+        <div class="cs-callout">
+          <p class="cs-callout-label">On the RMSE</p>
+          <p>An RMSE of ~171 seconds suggests the model captures broad demand shape well but struggles with outliers
+            (long leisure rides by casual users). Separate models per segment would likely reduce this variance by
+            15–25%.</p>
+        </div>
+      </div>
+
+      <div class="cs-section">
+        <div class="cs-section-header"><span class="cs-num">05</span>
+          <h2 class="cs-section-title">Business Recommendations</h2>
+        </div>
+        <div class="cs-rec-list">
+          <div class="cs-rec"><span class="cs-rec-num">1</span>
+            <div class="cs-rec-text"><strong>Segment-aware redistribution</strong>Pre-position bikes at transit hubs
+              before 8 am and 5 pm for members; increase capacity at leisure stations on weekend mornings for casual
+              riders.</div>
+          </div>
+          <div class="cs-rec"><span class="cs-rec-num">2</span>
+            <div class="cs-rec-text"><strong>Casual-to-member conversion</strong>Casual riders with 4+ weekend
+              rides/month are high-conversion targets. In-app prompts at ride end could meaningfully increase annual
+              subscriptions.</div>
+          </div>
+          <div class="cs-rec"><span class="cs-rec-num">3</span>
+            <div class="cs-rec-text"><strong>Expand e-bike fleet on casual routes</strong>Given the preference for
+              e-bikes among casual users on longer routes, fleet investment should weight e-bikes toward
+              tourist-corridor stations.</div>
+          </div>
+          <div class="cs-rec"><span class="cs-rec-num">4</span>
+            <div class="cs-rec-text"><strong>Winter demand stabilisation</strong>The sharp winter trough is partly
+              addressable through seasonal pricing incentives. Retaining casual riders in shoulder seasons (April,
+              October) smooths the revenue curve.</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="cs-section">
+        <div class="cs-section-header"><span class="cs-num">06</span>
+          <h2 class="cs-section-title">Limitations &amp; Future Work</h2>
+        </div>
+        <div class="cs-limit-row">
+          <div class="cs-limit">
+            <p class="cs-limit-title">No weather data</p>
+            <p class="cs-limit-body">Temperature and precipitation are likely among the strongest demand drivers.
+              Integrating weather API data would materially improve accuracy.</p>
+          </div>
+          <div class="cs-limit">
+            <p class="cs-limit-title">No holiday calendar</p>
+            <p class="cs-limit-body">Public holidays spike casual usage in ways the current model can't anticipate. A
+              binary holiday feature would resolve this.</p>
+          </div>
+          <div class="cs-limit">
+            <p class="cs-limit-title">Single-segment model</p>
+            <p class="cs-limit-body">Training one model for both user types introduces noise. Separate models would
+              likely improve RMSE by 15–25%.</p>
+          </div>
+        </div>
+        <p class="cs-p">Future iterations could explore gradient boosting (XGBoost/LightGBM), time-series forecasting
+          (Prophet/ARIMA) for station-level demand, and geospatial clustering to identify underserved corridors.</p>
+      </div>
+
+      <div class="cs-section">
+        <div class="cs-section-header"><span class="cs-num">07</span>
+          <h2 class="cs-section-title">Stack &amp; Methods</h2>
+        </div>
+        <div class="cs-stack-grid">
+          <div class="cs-stack-cell"><span class="cs-stack-name">Python</span><span class="cs-stack-role">Core
+              language</span></div>
+          <div class="cs-stack-cell"><span class="cs-stack-name">Pandas</span><span class="cs-stack-role">Data
+              wrangling</span></div>
+          <div class="cs-stack-cell"><span class="cs-stack-name">NumPy</span><span class="cs-stack-role">Numerical
+              ops</span></div>
+          <div class="cs-stack-cell"><span class="cs-stack-name">Geopy</span><span class="cs-stack-role">Haversine
+              distance</span></div>
+          <div class="cs-stack-cell"><span class="cs-stack-name">Matplotlib</span><span
+              class="cs-stack-role">Visualisation</span></div>
+          <div class="cs-stack-cell"><span class="cs-stack-name">Seaborn</span><span class="cs-stack-role">Statistical
+              plots</span></div>
+          <div class="cs-stack-cell"><span class="cs-stack-name">Scikit-learn</span><span class="cs-stack-role">ML
+              models</span></div>
+          <div class="cs-stack-cell"><span class="cs-stack-name">Jupyter</span><span class="cs-stack-role">Notebook
+              env</span></div>
+        </div>
+        <div class="tag-row">
+          <span class="tag tag-gray">Exploratory Data Analysis</span>
+          <span class="tag tag-gray">Feature Engineering</span>
+          <span class="tag tag-gray">Regression Modelling</span>
+          <span class="tag tag-gray">Model Evaluation</span>
+          <span class="tag tag-gray">Data Storytelling</span>
+          <span class="tag tag-gray">Geospatial Distance</span>
+        </div>
+        <div
+          style="margin-top:2.5rem;padding-top:1.75rem;border-top:1px solid var(--border);display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:1rem">
+          <p style="font-size:0.82rem;color:var(--text3);margin:0">Google Data Analytics Certificate capstone · Divvy
+            trip data</p>
+          <a href="https://github.com/yousuffd/Bike_Sharing_Analysis" target="_blank" class="btn-gold"
+            style="text-decoration:none">
+            View on GitHub
+            <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+              <path d="M5 12h14M12 5l7 7-7 7" />
+            </svg>
+          </a>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- ═══ CASE STUDY - AIRLINES═══ -->
+
+  <div id="page-airlines-case-study" class="page">
+
+    <!-- BACK -->
+    <div class="case-back-bar">
+      <button class="case-back-btn" onclick="showPage('projects')">
+        ← Back to Projects
+      </button>
+
+    </div>
+    <!-- HERO -->
+    <section class="cs-hero">
+      <div class="cs-label">
+        Aviation Analytics · Case Study
+      </div>
+
+      <h1 class="cs-title">
+        Airline Operations<br>
+        <em>Performance</em> & KPI<br>
+        Intelligence
+      </h1>
+
+      <p class="cs-subtitle">
+        Exploratory analysis of airline operational data
+        focused on delays, passenger utilisation,
+        fuel consumption, and operational efficiency trends.
+      </p>
+
+      <div class="cs-meta-row">
+        <div>
+          <span class="cs-meta-label">
+            Role
+          </span>
+
+          <span class="cs-meta-val">
+            BI & Analytics Lead
+          </span>
+        </div>
+        <div>
+
+          <span class="cs-meta-label">
+            Industry
+          </span>
+
+          <span class="cs-meta-val">
+            Airlines / Aviation
+          </span>
+        </div>
+        <div>
+
+          <span class="cs-meta-label">
+            Scope
+          </span>
+
+          <span class="cs-meta-val">
+            EDA · KPI Analysis · Operational Insights
+          </span>
+
+        </div>
+        <div>
+
+          <span class="cs-meta-label">
+            Tools
+          </span>
+
+          <span class="cs-meta-val">
+            Python · Pandas · Matplotlib
+          </span>
+        </div>
+      </div>
+
+    </section>
+
+    <!-- BODY -->
+    <main class="cs-body">
+
+      <!-- SECTION 01 -->
+      <section class="cs-section">
+
+        <div class="cs-section-header">
+
+          <span class="cs-num">
+            01
+          </span>
+
+          <h2 class="cs-section-title">
+            Business Problem
+          </h2>
+
+        </div>
+
+        <p class="cs-p">
+          Airlines operate in a highly complex
+          operational environment where delays,
+          passenger load, and fuel consumption
+          directly influence operational efficiency
+          and customer experience.
+        </p>
+
+        <p class="cs-p">
+          This project analyses airline operational
+          data to identify performance trends,
+          utilisation patterns, and operational
+          inefficiencies across multiple airline KPIs.
+        </p>
+
+        <div class="cs-stat-grid">
+
+          <div class="cs-stat-cell">
+
+            <span class="cs-stat-big">
+              1k+
+            </span>
+
+            <span class="cs-stat-label">
+              Flights Analysed
+            </span>
+
+          </div>
+
+          <div class="cs-stat-cell">
+
+            <span class="cs-stat-big">
+              8+
+            </span>
+
+            <span class="cs-stat-label">
+              Operational KPIs
+            </span>
+
+          </div>
+
+          <div class="cs-stat-cell">
+
+            <span class="cs-stat-big">
+              20+
+            </span>
+
+            <span class="cs-stat-label">
+              Delay & Utilisation Insights
+            </span>
+
+          </div>
+
+          <div class="cs-stat-cell">
+
+            <span class="cs-stat-big">
+              40%
+            </span>
+
+            <span class="cs-stat-label">
+              Operational Variance Observed
+            </span>
+
+          </div>
+
+        </div>
+
+      </section>
+
+      <!-- SECTION 02 -->
+      <section class="cs-section">
+
+        <div class="cs-section-header">
+
+          <span class="cs-num">
+            02
+          </span>
+
+          <h2 class="cs-section-title">
+            Dataset & Preparation
+          </h2>
+
+        </div>
+
+        <p class="cs-p">
+          The dataset contains airline operational
+          metrics including passenger counts,
+          available seats, operational timings,
+          distance travelled, and fuel usage.
+        </p>
+
+        <div class="tag-row">
+
+          <span class="tag tag-teal">
+            Airline
+          </span>
+
+          <span class="tag tag-teal">
+            Flight Type
+          </span>
+
+          <span class="tag tag-teal">
+            Passengers
+          </span>
+
+          <span class="tag tag-teal">
+            Available Seats
+          </span>
+
+          <span class="tag tag-teal">
+            Distance KM
+          </span>
+
+          <span class="tag tag-teal">
+            Fuel Burn
+          </span>
+
+          <span class="tag tag-gold">
+            Delay Analysis
+          </span>
+
+          <span class="tag tag-gold">
+            Load Factor
+          </span>
+
+        </div>
+
+        <ul class="cs-process">
+
+          <li class="cs-process-item">
+
+            <span class="cs-process-dot">
+              1
+            </span>
+
+            <div class="cs-process-content">
+
+              <p class="cs-process-title">
+                Data cleaning
+              </p>
+
+              <p class="cs-process-desc">
+                Validated operational timestamps,
+                handled inconsistent values,
+                and standardised key airline metrics.
+              </p>
+
+            </div>
+
+          </li>
+
+          <li class="cs-process-item">
+
+            <span class="cs-process-dot">
+              2
+            </span>
+
+            <div class="cs-process-content">
+
+              <p class="cs-process-title">
+                KPI engineering
+              </p>
+
+              <p class="cs-process-desc">
+                Derived operational indicators
+                such as load factor,
+                fuel efficiency,
+                and delay variance.
+              </p>
+
+            </div>
+
+          </li>
+
+          <li class="cs-process-item">
+
+            <span class="cs-process-dot">
+              3
+            </span>
+
+            <div class="cs-process-content">
+
+              <p class="cs-process-title">
+                Exploratory analysis
+              </p>
+
+              <p class="cs-process-desc">
+                Analysed operational relationships
+                between delays,
+                passenger utilisation,
+                and operational efficiency metrics.
+              </p>
+
+            </div>
+
+          </li>
+
+        </ul>
+
+      </section>
+
+      <!-- SECTION 03 -->
+      <section class="cs-section">
+
+        <div class="cs-section-header">
+
+          <span class="cs-num">
+            03
+          </span>
+
+          <h2 class="cs-section-title">
+            Exploratory Analysis
+          </h2>
+
+        </div>
+
+        <p class="cs-p">
+          The analysis identified several operational
+          efficiency patterns across passenger load,
+          delays, and fuel consumption behaviour.
+        </p>
+
+        <div class="cs-findings">
+
+          <div class="cs-finding teal">
+
+            <span class="cs-finding-icon">
+              ✈️
+            </span>
+
+            <p class="cs-finding-title">
+              Passenger load varied significantly
+            </p>
+
+            <p class="cs-finding-body">
+              Certain flight types demonstrated
+              stronger seat utilisation patterns
+              compared to others.
+            </p>
+
+          </div>
+
+          <div class="cs-finding blue">
+
+            <span class="cs-finding-icon">
+              ⛽
+            </span>
+
+            <p class="cs-finding-title">
+              Fuel usage increased with longer routes
+            </p>
+
+            <p class="cs-finding-body">
+              Distance travelled showed a direct
+              operational relationship with
+              fuel consumption metrics.
+            </p>
+
+          </div>
+
+          <div class="cs-finding gold">
+
+            <span class="cs-finding-icon">
+              📊
+            </span>
+
+            <p class="cs-finding-title">
+              Operational delays impacted efficiency
+            </p>
+
+            <p class="cs-finding-body">
+              Flights with larger delay windows
+              demonstrated higher operational variance.
+            </p>
+
+          </div>
+
+          <div class="cs-finding red">
+
+            <span class="cs-finding-icon">
+              🕒
+            </span>
+
+            <p class="cs-finding-title">
+              Arrival and departure patterns emerged
+            </p>
+
+            <p class="cs-finding-body">
+              Operational timing analysis revealed
+              recurring patterns in flight scheduling.
+            </p>
+
+          </div>
+
+        </div>
+
+        <div class="cs-callout">
+
+          <div class="cs-callout-label">
+            Key Insight
+          </div>
+
+          <p>
+            Operational efficiency in aviation
+            is heavily influenced by the combined
+            effect of utilisation,
+            delays,
+            and fuel consumption patterns.
+          </p>
+
+        </div>
+
+      </section>
+
+      <!-- SECTION 04 -->
+      <section class="cs-section">
+
+        <div class="cs-section-header">
+
+          <span class="cs-num">
+            04
+          </span>
+
+          <h2 class="cs-section-title">
+            Operational Insights
+          </h2>
+
+        </div>
+
+        <p class="cs-p">
+          The exploratory analysis surfaced
+          several business-relevant operational
+          insights that could support airline
+          efficiency optimisation initiatives.
+        </p>
+
+        <div class="cs-rec-list">
+
+          <div class="cs-rec">
+
+            <span class="cs-rec-num">
+              1
+            </span>
+
+            <div class="cs-rec-text">
+
+              <strong>
+                Improve route utilisation
+              </strong>
+
+              Underutilised flights can negatively
+              impact operational efficiency
+              and overall profitability.
+
+            </div>
+
+          </div>
+
+          <div class="cs-rec">
+
+            <span class="cs-rec-num">
+              2
+            </span>
+
+            <div class="cs-rec-text">
+
+              <strong>
+                Monitor delay-heavy operations
+              </strong>
+
+              Operational delay trends should
+              be continuously monitored to
+              improve scheduling efficiency.
+
+            </div>
+
+          </div>
+
+          <div class="cs-rec">
+
+            <span class="cs-rec-num">
+              3
+            </span>
+
+            <div class="cs-rec-text">
+
+              <strong>
+                Analyse fuel-intensive routes
+              </strong>
+
+              Long-distance and delay-heavy
+              flights contributed to higher
+              fuel consumption patterns.
+
+            </div>
+
+          </div>
+
+          <div class="cs-rec">
+
+            <span class="cs-rec-num">
+              4
+            </span>
+
+            <div class="cs-rec-text">
+
+              <strong>
+                Build operational BI dashboards
+              </strong>
+
+              Interactive dashboards would help
+              operational leadership monitor
+              delays, utilisation,
+              and airline performance centrally.
+
+            </div>
+
+          </div>
+
+        </div>
+
+      </section>
+
+      <!-- SECTION 05 -->
+      <section class="cs-section">
+
+        <div class="cs-section-header">
+
+          <span class="cs-num">
+            05
+          </span>
+
+          <h2 class="cs-section-title">
+            Tech Stack
+          </h2>
+
+        </div>
+
+        <div class="cs-stack-grid">
+
+          <div class="cs-stack-cell">
+
+            <span class="cs-stack-name">
+              Python
+            </span>
+
+            <span class="cs-stack-role">
+              Core analysis
+            </span>
+
+          </div>
+
+          <div class="cs-stack-cell">
+
+            <span class="cs-stack-name">
+              Pandas
+            </span>
+
+            <span class="cs-stack-role">
+              Data wrangling
+            </span>
+
+          </div>
+
+          <div class="cs-stack-cell">
+
+            <span class="cs-stack-name">
+              NumPy
+            </span>
+
+            <span class="cs-stack-role">
+              Numerical operations
+            </span>
+
+          </div>
+
+          <div class="cs-stack-cell">
+
+            <span class="cs-stack-name">
+              Matplotlib
+            </span>
+
+            <span class="cs-stack-role">
+              Visualisation
+            </span>
+
+          </div>
+
+          <div class="cs-stack-cell">
+
+            <span class="cs-stack-name">
+              Seaborn
+            </span>
+
+            <span class="cs-stack-role">
+              Exploratory analysis
+            </span>
+
+          </div>
+
+        </div>
+
+      </section>
+      <div style="margin-top:3rem">
+        <a
+          href="https://github.com/yousuffd/Airlines-Analysis"
+          target="_blank"
+          class="btn-primary"
+        >
+          View on GitHub
+
+          <svg width="14" height="14" viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2.5">
+
+            <path d="M5 12h14M12 5l7 7-7 7"/>
+
+          </svg>
+        </a>
+      </div>
+    </main>
+
+  </div>
+
+  <!-- ═══ CASE STUDY — YOUTUBE ═══ -->
+
+
+  <div id="page-youtube-case-study" class="page">
+
+    <!-- BACK -->
+    <div class="case-back-bar">
+
+      <button class="case-back-btn" onclick="showPage('projects')">
+
+        ← Back to Projects
+
+      </button>
+
+    </div>
+
+    <!-- HERO -->
+    <section class="cs-hero">
+
+      <div class="cs-label">
+        Creator Analytics · Case Study
+      </div>
+
+      <h1 class="cs-title">
+        YouTube Channel<br>
+        <em>Performance</em> Dashboard &<br>
+        Engagement Analytics
+      </h1>
+
+      <p class="cs-subtitle">
+        Enhanced analytics platform with predictive models
+        for YouTube creator performance, featuring machine learning
+        forecasts, posting pattern analysis, content categorisation,
+        and advanced engagement metrics.
+      </p>
+
+      <div class="cs-meta-row">
+
+        <div>
+
+          <span class="cs-meta-label">
+            Role
+          </span>
+
+          <span class="cs-meta-val">
+            BI & Analytics Lead
+          </span>
+
+        </div>
+
+        <div>
+
+          <span class="cs-meta-label">
+            Industry
+          </span>
+
+          <span class="cs-meta-val">
+            Creator Economy / Digital Media
+          </span>
+
+        </div>
+
+        <div>
+
+          <span class="cs-meta-label">
+            Scope
+          </span>
+
+          <span class="cs-meta-val">
+            Predictive Analytics · ML Forecasting · KPI Analysis · Engagement Insights
+          </span>
+
+        </div>
+
+        <div>
+
+          <span class="cs-meta-label">
+            Tools
+          </span>
+
+          <span class="cs-meta-val">
+            Python · Streamlit · Scikit-learn · Plotly
+          </span>
+
+        </div>
+
+      </div>
+
+    </section>
+
+    <!-- BODY -->
+    <main class="cs-body">
+
+      <!-- SECTION 01 -->
+      <section class="cs-section">
+
+        <div class="cs-section-header">
+
+          <span class="cs-num">
+            01
+          </span>
+
+          <h2 class="cs-section-title">
+            Business Problem
+          </h2>
+
+        </div>
+
+        <p class="cs-p">
+          Content creators and digital media teams
+          rely heavily on audience engagement,
+          subscriber growth,
+          and video performance metrics
+          to optimise content strategy.
+        </p>
+
+        <p class="cs-p">
+          This project builds an enhanced
+          YouTube analytics dashboard
+          with machine learning capabilities
+          to analyse creator KPIs,
+          predict video performance,
+          identify optimal posting patterns,
+          and surface actionable content insights.
+        </p>
+
+        <div class="cs-stat-grid">
+
+          <div class="cs-stat-cell">
+
+            <span class="cs-stat-big">
+              1k+
+            </span>
+
+            <span class="cs-stat-label">
+              Video Records Analysed
+            </span>
+
+          </div>
+
+          <div class="cs-stat-cell">
+
+            <span class="cs-stat-big">
+              10+
+            </span>
+
+            <span class="cs-stat-label">
+              Creator KPIs Tracked
+            </span>
+
+          </div>
+
+          <div class="cs-stat-cell">
+
+            <span class="cs-stat-big">
+              7
+            </span>
+
+            <span class="cs-stat-label">
+              Interactive Dashboard Tabs
+            </span>
+
+          </div>
+
+          <div class="cs-stat-cell">
+
+            <span class="cs-stat-big">
+              85%+
+            </span>
+
+            <span class="cs-stat-label">
+              ML Model Accuracy (R² Score)
+            </span>
+
+          </div>
+
+        </div>
+
+      </section>
+
+      <!-- SECTION 02 -->
+      <section class="cs-section">
+
+        <div class="cs-section-header">
+
+          <span class="cs-num">
+            02
+          </span>
+
+          <h2 class="cs-section-title">
+            Dataset & Preparation
+          </h2>
+
+        </div>
+
+        <p class="cs-p">
+          The dataset includes comprehensive creator performance
+          metrics extracted via YouTube Data API v3,
+          including views, likes, comments, subscribers,
+          video duration, publish timestamps,
+          tags, descriptions,
+          and engagement indicators
+          used to train predictive models
+          and evaluate channel performance.
+        </p>
+
+        <div class="tag-row">
+
+          <span class="tag tag-teal">
+            Views
+          </span>
+
+          <span class="tag tag-teal">
+            Likes
+          </span>
+
+          <span class="tag tag-teal">
+            Comments
+          </span>
+
+          <span class="tag tag-teal">
+            Subscribers
+          </span>
+
+          <span class="tag tag-teal">
+            Video Category
+          </span>
+
+          <span class="tag tag-teal">
+            Video Duration
+          </span>
+
+          <span class="tag tag-teal">
+            Publish Timestamp
+          </span>
+
+          <span class="tag tag-teal">
+            Growth Velocity
+          </span>
+
+          <span class="tag tag-gold">
+            Posting Patterns
+          </span>
+
+          <span class="tag tag-gold">
+            Performance Categories
+          </span>
+
+        </div>
+
+        <ul class="cs-process">
+
+          <li class="cs-process-item">
+
+            <span class="cs-process-dot">
+              1
+            </span>
+
+            <div class="cs-process-content">
+
+              <p class="cs-process-title">
+                Data preparation & feature engineering
+              </p>
+
+              <p class="cs-process-desc">
+                Standardised creator metrics,
+                validated numerical fields,
+                extracted temporal features (day, hour, video age),
+                and engineered performance indicators.
+              </p>
+
+            </div>
+
+          </li>
+
+          <li class="cs-process-item">
+
+            <span class="cs-process-dot">
+              2
+            </span>
+
+            <div class="cs-process-content">
+
+              <p class="cs-process-title">
+                ML model development
+              </p>
+
+              <p class="cs-process-desc">
+                Built Random Forest and Gradient Boosting models
+                for view prediction, trained on video features,
+                and evaluated model performance.
+              </p>
+
+            </div>
+
+          </li>
+
+          <li class="cs-process-item">
+
+            <span class="cs-process-dot">
+              3
+            </span>
+
+            <div class="cs-process-content">
+
+              <p class="cs-process-title">
+                Dashboard & analytics integration
+              </p>
+
+              <p class="cs-process-desc">
+                Built 7-tab interactive dashboard with
+                growth tracking, predictive analytics,
+                posting pattern analysis, and content categorisation.
+              </p>
+
+            </div>
+
+          </li>
+
+        </ul>
+
+      </section>
+
+      <!-- SECTION 03 -->
+      <section class="cs-section">
+
+        <div class="cs-section-header">
+
+          <span class="cs-num">
+            03
+          </span>
+
+          <h2 class="cs-section-title">
+            Dashboard Insights
+          </h2>
+
+        </div>
+
+        <p class="cs-p">
+          The enhanced dashboard with machine learning capabilities
+          surfaced predictive insights, temporal patterns,
+          and performance categorisations across
+          multiple creator channels and video content.
+        </p>
+
+        <div class="cs-findings">
+
+          <div class="cs-finding teal">
+
+            <span class="cs-finding-icon">
+              🔮
+            </span>
+
+            <p class="cs-finding-title">
+              ML models achieved 85%+ prediction accuracy
+            </p>
+
+            <p class="cs-finding-body">
+              Random Forest models successfully predicted
+              video views with high accuracy (R² > 0.85),
+              enabling proactive content strategy decisions.
+            </p>
+
+          </div>
+
+          <div class="cs-finding blue">
+
+            <span class="cs-finding-icon">
+              🎯
+            </span>
+
+            <p class="cs-finding-title">
+              Posting patterns significantly impact views
+            </p>
+
+            <p class="cs-finding-body">
+              Analysis revealed optimal posting days and times,
+              with certain day-hour combinations showing
+              up to 40% higher average performance.
+            </p>
+
+          </div>
+
+          <div class="cs-finding gold">
+
+            <span class="cs-finding-icon">
+              📊
+            </span>
+
+            <p class="cs-finding-title">
+              Content categorisation identified viral patterns
+            </p>
+
+            <p class="cs-finding-body">
+              Performance categorisation (Viral, Strong, Moderate, Underperforming)
+              revealed key factors differentiating
+              top-performing videos from average content.
+            </p>
+
+          </div>
+
+          <div class="cs-finding red">
+
+            <span class="cs-finding-icon">
+              ⚡
+            </span>
+
+            <p class="cs-finding-title">
+              Growth velocity tracking enabled insights
+            </p>
+
+            <p class="cs-finding-body">
+              Views-per-day metrics and growth rate calculations
+              provided real-time visibility into content momentum
+              and viral potential.
+            </p>
+
+          </div>
+
+        </div>
+
+        <div class="cs-callout">
+
+          <div class="cs-callout-label">
+            Key Insight
+          </div>
+
+          <p>
+            Machine learning predictions combined with
+            temporal analysis and content categorisation
+            enable creators to optimise upload timing,
+            forecast performance,
+            and identify viral patterns
+            before committing resources to production.
+          </p>
+
+        </div>
+
+      </section>
+
+      <!-- SECTION 04 -->
+      <section class="cs-section">
+
+        <div class="cs-section-header">
+
+          <span class="cs-num">
+            04
+          </span>
+
+          <h2 class="cs-section-title">
+            Business Recommendations
+          </h2>
+
+        </div>
+
+        <div class="cs-rec-list">
+
+          <div class="cs-rec">
+
+            <span class="cs-rec-num">
+              1
+            </span>
+
+            <div class="cs-rec-text">
+
+              <strong>
+                Leverage predictive models for content planning
+              </strong>
+
+              Use ML forecasts to predict video performance
+              before production, optimising resource allocation
+              and content scheduling decisions.
+            </div>
+
+          </div>
+
+          <div class="cs-rec">
+
+            <span class="cs-rec-num">
+              2
+            </span>
+
+            <div class="cs-rec-text">
+
+              <strong>
+                Optimise posting schedules with data
+              </strong>
+
+              Align upload timing with identified
+              high-performance day-hour windows
+              to maximise initial engagement and reach.
+            </div>
+
+          </div>
+
+          <div class="cs-rec">
+
+            <span class="cs-rec-num">
+              3
+            </span>
+
+            <div class="cs-rec-text">
+
+              <strong>
+                Identify and replicate viral patterns
+              </strong>
+
+              Analyse characteristics of top-performing
+              (Viral/Strong) content to inform
+              future video production strategies.
+            </div>
+
+          </div>
+
+          <div class="cs-rec">
+
+            <span class="cs-rec-num">
+              4
+            </span>
+
+            <div class="cs-rec-text">
+
+              <strong>
+                Monitor growth velocity in real-time
+              </strong>
+
+              Track views-per-day and growth rates
+              to identify trending content early
+              and amplify successful videos.
+            </div>
+
+          </div>
+
+        </div>
+
+      </section>
+
+      <!-- SECTION 05 -->
+      <section class="cs-section">
+
+        <div class="cs-section-header">
+
+          <span class="cs-num">
+            05
+          </span>
+
+          <h2 class="cs-section-title">
+            Tech Stack
+          </h2>
+
+        </div>
+
+        <div class="cs-stack-grid">
+
+          <div class="cs-stack-cell">
+
+            <span class="cs-stack-name">
+              Python
+            </span>
+
+            <span class="cs-stack-role">
+              Core analysis
+            </span>
+
+          </div>
+
+          <div class="cs-stack-cell">
+
+            <span class="cs-stack-name">
+              Streamlit
+            </span>
+
+            <span class="cs-stack-role">
+              Dashboard application
+            </span>
+
+          </div>
+
+          <div class="cs-stack-cell">
+
+            <span class="cs-stack-name">
+              Pandas
+            </span>
+
+            <span class="cs-stack-role">
+              Data wrangling
+            </span>
+
+          </div>
+
+          <div class="cs-stack-cell">
+
+            <span class="cs-stack-name">
+              NumPy
+            </span>
+
+            <span class="cs-stack-role">
+              Numerical operations
+            </span>
+
+          </div>
+
+          <div class="cs-stack-cell">
+
+            <span class="cs-stack-name">
+              Plotly
+            </span>
+
+            <span class="cs-stack-role">
+              Interactive visualisation
+            </span>
+
+          </div>
+
+          <div class="cs-stack-cell">
+
+            <span class="cs-stack-name">
+              Scikit-learn
+            </span>
+
+            <span class="cs-stack-role">
+              Machine learning models
+            </span>
+
+          </div>
+
+          <div class="cs-stack-cell">
+
+            <span class="cs-stack-name">
+              YouTube Data API v3
+            </span>
+
+            <span class="cs-stack-role">
+              Data extraction
+            </span>
+
+          </div>
+
+        </div>
+
+      </section>
+      <div style="margin-top:3rem">
+        <a
+          href="https://github.com/yousuffd/Youtube-Channel-Analysis"
+          target="_blank"
+          class="btn-primary"
+        >
+          View on GitHub
+
+          <svg width="14" height="14" viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2.5">
+
+            <path d="M5 12h14M12 5l7 7-7 7"/>
+
+          </svg>
+        </a>
+      </div>
+    </main>
+
+  </div>
+
+  <!-- ═══ CASE STUDY — SALES DASHBOARD ═══ -->
+
+  <div id="page-sales-dashboard-case-study" class="page">
+
+    <!-- BACK -->
+    <div class="case-back-bar">
+      <button class="case-back-btn"
+        onclick="showPage('projects')">
+        ← Back to Projects
+      </button>
+    </div>
+
+    <!-- HERO -->
+    <section class="cs-hero">
+
+      <div class="cs-label">
+        Tableau BI · Case Study
+      </div>
+
+      <h1 class="cs-title">
+        Sales & Customer<br>
+        <em>Performance</em> Intelligence<br>
+        Dashboard
+      </h1>
+
+      <p class="cs-subtitle">
+        Enterprise Tableau dashboard built to monitor
+        sales performance, customer profitability,
+        discount impact, YoY growth,
+        and executive KPIs through interactive
+        business intelligence reporting.
+      </p>
+
+      <div class="cs-meta-row">
+        <div>
+          <span class="cs-meta-label">Role</span>
+          <span class="cs-meta-val">
+            BI & Analytics Lead
+          </span>
+        </div>
+
+        <div>
+          <span class="cs-meta-label">Industry</span>
+          <span class="cs-meta-val">
+            Retail / Sales Analytics
+          </span>
+        </div>
+
+        <div>
+          <span class="cs-meta-label">Scope</span>
+          <span class="cs-meta-val">
+            KPI Analytics · Customer Insights · Tableau BI
+          </span>
+        </div>
+
+        <div>
+          <span class="cs-meta-label">Tools</span>
+          <span class="cs-meta-val">
+            Tableau · SQL · Data Modelling
+          </span>
+        </div>
+      </div>
+
+    </section>
+
+    <!-- BODY -->
+    <main class="cs-body">
+
+      <!-- SECTION 01 -->
+      <section class="cs-section">
+
+        <div class="cs-section-header">
+
+          <span class="cs-num">01</span>
+
+          <h2 class="cs-section-title">
+            Business Problem
+          </h2>
+
+        </div>
+
+        <p class="cs-p">
+          Sales organisations often struggle with
+          fragmented reporting across customers,
+          products, profitability,
+          and regional performance.
+        </p>
+
+        <p class="cs-p">
+          This project centralised business KPIs
+          into a unified Tableau dashboard
+          enabling leadership teams to monitor
+          revenue trends, customer profitability,
+          discount impact,
+          and YoY performance through
+          interactive executive reporting.
+        </p>
+
+        <div class="cs-stat-grid">
+
+          <div class="cs-stat-cell">
+            <span class="cs-stat-big">10+</span>
+            <span class="cs-stat-label">
+              Executive KPIs
+            </span>
+          </div>
+
+          <div class="cs-stat-cell">
+            <span class="cs-stat-big">5+</span>
+            <span class="cs-stat-label">
+              Dashboard Views
+            </span>
+          </div>
+
+          <div class="cs-stat-cell">
+            <span class="cs-stat-big">YoY</span>
+            <span class="cs-stat-label">
+              Growth Analysis
+            </span>
+          </div>
+
+          <div class="cs-stat-cell">
+            <span class="cs-stat-big">360°</span>
+            <span class="cs-stat-label">
+              Customer Visibility
+            </span>
+          </div>
+
+        </div>
+
+      </section>
+
+      <!-- SECTION 02 -->
+      <section class="cs-section">
+
+        <div class="cs-section-header">
+
+          <span class="cs-num">02</span>
+
+          <h2 class="cs-section-title">
+            Dashboard Capabilities
+          </h2>
+
+        </div>
+
+        <div class="tag-row">
+
+          <span class="tag tag-teal">Sales KPIs</span>
+          <span class="tag tag-teal">YoY Analysis</span>
+          <span class="tag tag-teal">Customer Profitability</span>
+          <span class="tag tag-teal">Product Performance</span>
+          <span class="tag tag-teal">LTV Analysis</span>
+
+          <span class="tag tag-gold">Discount Impact</span>
+          <span class="tag tag-gold">Regional Trends</span>
+          <span class="tag tag-gold">Top Customers</span>
+
+        </div>
+
+        <ul class="cs-process">
+
+          <li class="cs-process-item">
+
+            <span class="cs-process-dot">1</span>
+
+            <div class="cs-process-content">
+
+              <p class="cs-process-title">
+                Executive KPI design
+              </p>
+
+              <p class="cs-process-desc">
+                Designed high-level KPI reporting
+                for sales, profit,
+                customer growth,
+                and operational visibility.
+              </p>
+
+            </div>
+
+          </li>
+
+          <li class="cs-process-item">
+
+            <span class="cs-process-dot">2</span>
+
+            <div class="cs-process-content">
+
+              <p class="cs-process-title">
+                Customer analytics
+              </p>
+
+              <p class="cs-process-desc">
+                Built profitability,
+                segmentation,
+                and customer distribution views
+                to identify high-value accounts.
+              </p>
+
+            </div>
+
+          </li>
+
+          <li class="cs-process-item">
+
+            <span class="cs-process-dot">3</span>
+
+            <div class="cs-process-content">
+
+              <p class="cs-process-title">
+                Interactive dashboarding
+              </p>
+
+              <p class="cs-process-desc">
+                Enabled drilldowns,
+                filters,
+                YoY comparisons,
+                and cross-functional exploration
+                for business users.
+              </p>
+
+            </div>
+
+          </li>
+
+        </ul>
+
+      </section>
+
+      <!-- SECTION 03 -->
+      <section class="cs-section">
+
+        <div class="cs-section-header">
+
+          <span class="cs-num">03</span>
+
+          <h2 class="cs-section-title">
+            Key Insights
+          </h2>
+
+        </div>
+
+        <div class="cs-findings">
+
+          <div class="cs-finding teal">
+
+            <span class="cs-finding-icon">📈</span>
+
+            <p class="cs-finding-title">
+              YoY trends highlighted revenue shifts
+            </p>
+
+            <p class="cs-finding-body">
+              Year-over-year analysis surfaced
+              category-level growth
+              and declining performance segments.
+            </p>
+
+          </div>
+
+          <div class="cs-finding blue">
+
+            <span class="cs-finding-icon">👥</span>
+
+            <p class="cs-finding-title">
+              Customer profitability varied significantly
+            </p>
+
+            <p class="cs-finding-body">
+              A small group of customers contributed
+              disproportionately to overall profitability.
+            </p>
+
+          </div>
+
+          <div class="cs-finding gold">
+
+            <span class="cs-finding-icon">🏷️</span>
+
+            <p class="cs-finding-title">
+              Discounts impacted margin performance
+            </p>
+
+            <p class="cs-finding-body">
+              Higher discount levels showed
+              measurable effects on profit contribution.
+            </p>
+
+          </div>
+
+          <div class="cs-finding red">
+
+            <span class="cs-finding-icon">📦</span>
+
+            <p class="cs-finding-title">
+              Product categories behaved differently
+            </p>
+
+            <p class="cs-finding-body">
+              Certain categories drove stronger
+              sales volume while others
+              delivered better margin efficiency.
+            </p>
+
+          </div>
+
+        </div>
+
+        <div class="cs-callout">
+
+          <div class="cs-callout-label">
+            Executive Insight
+          </div>
+
+          <p>
+            Combining customer profitability,
+            discount analysis,
+            and YoY sales intelligence
+            enabled more informed
+            pricing and growth decisions.
+          </p>
+
+        </div>
+
+      </section>
+
+      <!-- SECTION 04 -->
+      <section class="cs-section">
+
+        <div class="cs-section-header">
+
+          <span class="cs-num">04</span>
+
+          <h2 class="cs-section-title">
+            Business Value
+          </h2>
+
+        </div>
+
+        <div class="cs-rec-list">
+
+          <div class="cs-rec">
+
+            <span class="cs-rec-num">1</span>
+
+            <div class="cs-rec-text">
+
+              <strong>
+                Unified executive reporting
+              </strong>
+
+              Centralised sales and customer KPIs
+              into a single interactive BI experience.
+
+            </div>
+
+          </div>
+
+          <div class="cs-rec">
+
+            <span class="cs-rec-num">2</span>
+
+            <div class="cs-rec-text">
+
+              <strong>
+                Improved profitability visibility
+              </strong>
+
+              Enabled leadership to identify
+              high-margin customers,
+              products,
+              and regions.
+
+            </div>
+
+          </div>
+
+          <div class="cs-rec">
+
+            <span class="cs-rec-num">3</span>
+
+            <div class="cs-rec-text">
+
+              <strong>
+                Faster analytical decisions
+              </strong>
+
+              Reduced dependency on manual reporting
+              through self-service Tableau dashboards.
+
+            </div>
+
+          </div>
+
+        </div>
+
+      </section>
+
+      <!-- SECTION 05 -->
+      <section class="cs-section">
+
+        <div class="cs-section-header">
+
+          <span class="cs-num">05</span>
+
+          <h2 class="cs-section-title">
+            Tech Stack
+          </h2>
+
+        </div>
+
+        <div class="cs-stack-grid">
+
+          <div class="cs-stack-cell">
+            <span class="cs-stack-name">Tableau</span>
+            <span class="cs-stack-role">
+              Dashboarding
+            </span>
+          </div>
+
+          <div class="cs-stack-cell">
+            <span class="cs-stack-name">SQL</span>
+            <span class="cs-stack-role">
+              Data querying
+            </span>
+          </div>
+
+          <div class="cs-stack-cell">
+            <span class="cs-stack-name">Data Modelling</span>
+            <span class="cs-stack-role">
+              KPI architecture
+            </span>
+          </div>
+
+          <div class="cs-stack-cell">
+            <span class="cs-stack-name">Business Intelligence</span>
+            <span class="cs-stack-role">
+              Executive reporting
+            </span>
+          </div>
+
+        </div>
+
+      </section>
+
+    </main>
+
+  </div>
+
+  <!-- ═══ CONTACT PAGE ═══ -->
+  <div id="page-contact" class="page">
+    <div class="page-hero" id="page-contact">
+      <div class="page-eyebrow">Contact</div>
+      <h1 class="page-title">Let's build<br><em>something</em><br>that matters.</h1>
+      <p class="page-desc">Open to senior BI, Data Analytics, and Revenue Analytics leadership roles. Based in
+        Bangalore, India — available for global remote.</p>
+    </div>
+    <div style="padding:2.5rem 3rem 5rem;display:flex;flex-direction:column;gap:0.85rem;max-width:500px">
+      <a class="contact-link cl-email" href="mailto:yousuffd@gmail.com">
+        <div class="contact-link-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke-width="1.8">
+            <rect x="2" y="4" width="20" height="16" rx="2" />
+            <polyline points="2,4 12,13 22,4" />
+          </svg>
+        </div>
+        <div>
+          <span class="contact-link-label">Email</span>
+          <span class="contact-link-val">yousuffd@gmail.com</span>
+        </div>
+      </a>
+      <a class="contact-link cl-linkedin" href="https://linkedin.com/in/yousuffd-07b14714" target="_blank">
+        <div class="contact-link-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke-width="1.8">
+            <rect x="2" y="2" width="20" height="20" rx="3" />
+            <path d="M7 10v7M7 7v.01M12 17v-4a2 2 0 0 1 4 0v4M12 10v7" />
+          </svg>
+        </div>
+        <div>
+          <span class="contact-link-label">LinkedIn</span>
+          <span class="contact-link-val">linkedin.com/in/yousuffd-07b14714</span>
+        </div>
+      </a>
+      <a class="contact-link cl-github" href="https://github.com/yousuffd" target="_blank">
+        <div class="contact-link-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke-width="1.8">
+            <path
+              d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22" />
+          </svg>
+        </div>
+        <div>
+          <span class="contact-link-label">GitHub</span>
+          <span class="contact-link-val">github.com/yousuffd</span>
+        </div>
+      </a>
+    </div>
+  </div>
+
+  <script>
+    function showPage(id) {
+      document.querySelectorAll('.page').forEach(p => p.classList.remove('active'));
+      document.querySelectorAll('.nav-links a').forEach(a => a.classList.remove('active'));
+      const page = document.getElementById('page-' + id);
+      if (page) { page.classList.add('active'); window.scrollTo(0, 0) }
+      const navMap = { home: 'nav-home', about: 'nav-about', projects: 'nav-projects', 'case-bike': 'nav-projects', contact: 'nav-home' };
+      const navEl = document.getElementById(navMap[id]);
+      if (navEl) navEl.classList.add('active');
+    }
+
+    function scrollToSection(id) {
+      event.preventDefault();
+      const el = document.getElementById(id);
+      if (el) {
+        const top = el.getBoundingClientRect().top + window.scrollY - 64 - 48;
+        window.scrollTo({ top, behavior: 'smooth' });
+      }
+    }
+  </script>
+
+  
+</body>
+
+</html>
