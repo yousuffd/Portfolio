@@ -1140,6 +1140,10 @@
       background: linear-gradient(135deg, #f3e8ff 0%, #e9d5ff 55%, #d8b4fe 100%);
     }
 
+    .project-card-visual.ecom {
+      background: linear-gradient(135deg, #d1fae5 0%, #a7f3d0 55%, #6ee7b7 100%);
+    }
+
     /*.visual-icon{
   width:60px;height:60px;border-radius:14px;
   border:1px solid rgba(255,255,255,0.5);
@@ -2447,7 +2451,7 @@
         <div>
           <div class="about-photo-wrap">
             <!-- Replace the src below with the actual photo URL or file path -->
-            <img src="profile.jpeg" alt="Dilshad Yousuff"
+            <img src="/Users/dilshad/Desktop/Portfolio Website/My Portfolio/Photo.jpeg" alt="Dilshad Yousuff"
               onerror="this.style.display='none';this.nextElementSibling.style.display='flex';" />
             <div class="about-avatar-fallback" style="display:none">DY</div>
           </div>
@@ -2532,6 +2536,93 @@
 
     <div class="projects-grid">
 
+      <!-- 1 · Airlines -->
+      <a class="project-card" onclick="showPage('airlines-case-study')">
+        <div class="project-card-visual airlines">
+          <div class="visual-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="#2563eb">
+              <path d="M21 16v-2l-8-5V3.5a1.5 1.5 0 0 0-3 0V9l-8 5v2l8-2.5V19l-2 1.5V22l3.5-1 3.5 1v-1.5L13 19v-5.5z" />
+            </svg>
+          </div>
+        </div>
+        <div class="project-card-body">
+          <div class="project-card-tag">Aviation Analytics · ML</div>
+          <h3 class="project-card-name">Airline Operations Analysis</h3>
+          <p class="project-card-desc">Operational analytics and predictive modelling for airline delays, utilisation, fuel efficiency, and passenger intelligence.</p>
+        </div>
+        <div class="project-card-footer">
+          <span class="project-status-done">Completed</span>
+          <span class="project-arrow">→</span>
+        </div>
+      </a>
+
+      <!-- 2 · YouTube -->
+      <a class="project-card" onclick="showPage('youtube-case-study')">
+        <div class="project-card-visual youtube">
+          <div class="visual-icon">
+            <svg viewBox="0 0 24 24" style="stroke:#FF0000">
+              <rect x="3" y="6" width="18" height="12" rx="3" />
+              <path d="M10 9l5 3-5 3z" />
+            </svg>
+          </div>
+        </div>
+        <div class="project-card-body">
+          <div class="project-card-tag">ML Analytics · Predictive Modeling · Executive BI</div>
+          <h3 class="project-card-name">YouTube Analytics Intelligence Dashboard</h3>
+          <p class="project-card-desc">Streamlit dashboard with 3 ML prediction models (virality, performance, views), 5 custom strategic KPIs, publishing optimisation heatmaps, and benchmarked content recommendations.</p>
+        </div>
+        <div class="project-card-footer">
+          <span class="project-status-done">Completed</span>
+          <span class="project-arrow">→</span>
+        </div>
+      </a>
+
+      <!-- 3 · E-Commerce -->
+      <a class="project-card" onclick="showPage('ecom-case-study')">
+        <div class="project-card-visual ecom">
+          <div class="visual-icon" style="border-color:rgba(5,150,105,0.3)">
+            <svg viewBox="0 0 24 24" style="stroke:#047857;fill:none;stroke-width:1.8">
+              <path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"/>
+              <line x1="3" y1="6" x2="21" y2="6"/>
+              <path d="M16 10a4 4 0 0 1-8 0"/>
+            </svg>
+          </div>
+        </div>
+        <div class="project-card-body">
+          <div class="project-card-tag">E-Commerce BI · AI Insights · Streamlit</div>
+          <h3 class="project-card-name">E-Commerce C-Suite Intelligence Dashboard</h3>
+          <p class="project-card-desc">5-page Streamlit dashboard covering revenue, operations, profitability, and AI-generated board insights — with Claude AI / GPT-4o integration and multi-source data ingestion.</p>
+        </div>
+        <div class="project-card-footer">
+          <span class="project-status-done">Completed</span>
+          <span class="project-arrow">→</span>
+        </div>
+      </a>
+
+      <!-- 4 · Sales Dashboard -->
+      <a class="project-card" onclick="showPage('sales-dashboard-case-study')">
+        <div class="project-card-visual revenue">
+          <div class="visual-icon" style="border-color:rgba(78,168,255,0.35)">
+            <svg viewBox="0 0 24 24" style="stroke:var(--navy)">
+              <path d="M4 19h16"/>
+              <path d="M7 16V9"/>
+              <path d="M12 16V5"/>
+              <path d="M17 16v-3"/>
+            </svg>
+          </div>
+        </div>
+        <div class="project-card-body">
+          <p class="project-card-tag">Tableau · Sales Analytics · Executive BI</p>
+          <p class="project-card-name">Sales & Customer Performance Dashboard</p>
+          <p class="project-card-desc">Executive sales intelligence dashboard analysing revenue performance, customer profitability, discount impact, YoY growth, and product trends through interactive Tableau analytics.</p>
+        </div>
+        <div class="project-card-footer">
+          <span class="project-status-done">Completed</span>
+          <span class="project-arrow">→</span>
+        </div>
+      </a>
+
+      <!-- 5 · Bike Sharing -->
       <div class="project-card" onclick="showPage('case-bike')">
         <div class="project-card-visual bike">
           <div class="visual-icon" style="border-color:rgba(14,123,114,0.3)">
@@ -2546,143 +2637,13 @@
         <div class="project-card-body">
           <p class="project-card-tag">EDA · Machine Learning · Python</p>
           <p class="project-card-name">Bike Sharing Analysis &amp; Demand Prediction</p>
-          <p class="project-card-desc">Exploratory analysis of Divvy trip data to uncover rider behaviour patterns
-            across member and casual segments — plus a Random Forest model to forecast ride demand.</p>
+          <p class="project-card-desc">Exploratory analysis of 5.7M Divvy trip records to uncover rider behaviour patterns across member and casual segments — plus a Random Forest model to forecast ride demand.</p>
         </div>
         <div class="project-card-footer">
           <span class="project-status-done">Completed</span>
           <span class="project-arrow">→</span>
         </div>
       </div>
-
-     <a class="project-card" onclick="showPage('youtube-case-study')">
-        <div class="project-card-visual youtube">
-          <div class="visual-icon">
-            <svg viewBox="0 0 24 24" style="stroke:#FF0000">
-              <rect x="3" y="6" width="18" height="12" rx="3" />
-              <path d="M10 9l5 3-5 3z" />
-            </svg>
-          </div>
-        </div>
-        <div class="project-card-body">
-          <div class="project-card-tag">
-            ML Analytics · Predictive Modeling · Executive BI
-          </div>
-          <h3 class="project-card-name">
-            YouTube Analytics Executive Dashboard
-          </h3>
-          <p class="project-card-desc">
-            Streamlit dashboard with 3 ML prediction models (virality, performance, views),
-            strategic KPI tracking, publishing optimization heatmaps, and
-            actionable content recommendations for creator strategy.
-          </p>
-        </div>
-        <div class="project-card-footer">
-          <span class="project-status-done">
-            Completed
-          </span>
-          <span class="project-arrow">
-            →
-          </span>
-        </div>
-      </a>
-
-
-      <a class="project-card" onclick="showPage('sales-dashboard-case-study')">
-        <div class="project-card-visual revenue">
-          <div class="visual-icon"
-            style="border-color:rgba(78,168,255,0.35)">
-            <svg viewBox="0 0 24 24"
-              style="stroke:var(--navy)">
-              <path d="M4 19h16"/>
-              <path d="M7 16V9"/>
-              <path d="M12 16V5"/>
-              <path d="M17 16v-3"/>
-            </svg>
-          </div>
-        </div>
-        <div class="project-card-body">
-          <p class="project-card-tag">
-            Tableau · Sales Analytics · Executive BI
-          </p>
-          <p class="project-card-name">
-            Sales & Customer Performance Dashboard
-          </p>
-          <p class="project-card-desc">
-            Executive sales intelligence dashboard analysing
-            revenue performance, customer profitability,
-            discount impact, YoY growth, and product trends
-            through interactive Tableau analytics.
-          </p>
-        </div>
-        <div class="project-card-footer">
-          <span class="project-status-done">
-            Completed
-          </span>
-          <span class="project-arrow">
-            →
-          </span>
-        </div>
-      </a>
-      <a class="project-card" onclick="showPage('airlines-case-study')">
-
-        <div class="project-card-visual airlines">
-          <div class="visual-icon">
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="#2563eb">
-
-              <path d="M21 16v-2l-8-5V3.5
-                            a1.5 1.5 0 0 0-3 0V9
-                            l-8 5v2l8-2.5V19
-                            l-2 1.5V22l3.5-1
-                            3.5 1v-1.5L13 19v-5.5z" />
-
-            </svg>
-          </div>
-        </div>
-
-        <div class="project-card-body">
-          <div class="project-card-tag">
-            Aviation Analytics · ML
-          </div>
-
-          <h3 class="project-card-name">
-            Airline Operations Analysis
-          </h3>
-          <p class="project-card-desc">
-            Operational analytics and predictive modelling
-            for airline delays, utilisation, fuel efficiency,
-            and passenger intelligence.
-          </p>
-        </div>
-
-        <div class="project-card-footer">
-          <span class="project-status-done">
-            Completed
-          </span>
-          <span class="project-arrow">
-            →
-          </span>
-        </div>
-      </a>
-
-      <!-- <div class="project-card" style="cursor:default;opacity:0.5;pointer-events:none">
-        <div class="project-card-visual product">
-          <div class="visual-icon" style="border-color:rgba(160,120,220,0.3)">
-            <svg viewBox="0 0 24 24" style="stroke:#8855CC">
-              <path d="M3 3h7v7H3zM14 3h7v7h-7zM14 14h7v7h-7zM3 14h7v7H3z" />
-            </svg>
-          </div>
-        </div>
-        <div class="project-card-body">
-          <p class="project-card-tag">Product Analytics · Cohort Analysis · SQL</p>
-          <p class="project-card-name">Product Adoption &amp; Funnel Analytics</p>
-          <p class="project-card-desc">Cohort-level funnel analysis revealing which feature adoption patterns correlate
-            with long-term retention.</p>
-        </div>
-        <div class="project-card-footer">
-          <span class="project-status-wip">Coming Soon</span>
-        </div>
-      </div> -->
 
     </div>
   </div>
@@ -2993,67 +2954,49 @@
       <button class="case-back-btn" onclick="showPage('projects')">
         ← Back to Projects
       </button>
-
     </div>
+
     <!-- HERO -->
     <section class="cs-hero">
+
       <div class="cs-label">
-        Aviation Analytics · Case Study
+        Aviation Analytics · Executive Intelligence Platform
       </div>
 
       <h1 class="cs-title">
-        Airline Operations<br>
-        <em>Performance</em> & KPI<br>
-        Intelligence
+        Airline Executive<br>
+        <em>Analytics</em> Platform
       </h1>
 
       <p class="cs-subtitle">
-        Exploratory analysis of airline operational data
-        focused on delays, passenger utilisation,
-        fuel consumption, and operational efficiency trends.
+        Enterprise-grade aviation analytics platform combining commercial,
+        operational, fleet, passenger, sustainability, forecasting,
+        and AI-driven insights into a unified executive
+        decision-support system.
       </p>
 
       <div class="cs-meta-row">
+
         <div>
-          <span class="cs-meta-label">
-            Role
-          </span>
-
-          <span class="cs-meta-val">
-            BI & Analytics Lead
-          </span>
+          <span class="cs-meta-label">Role</span>
+          <span class="cs-meta-val">BI & Analytics Lead</span>
         </div>
+
         <div>
-
-          <span class="cs-meta-label">
-            Industry
-          </span>
-
-          <span class="cs-meta-val">
-            Airlines / Aviation
-          </span>
+          <span class="cs-meta-label">Industry</span>
+          <span class="cs-meta-val">Airlines & Aviation</span>
         </div>
+
         <div>
-
-          <span class="cs-meta-label">
-            Scope
-          </span>
-
-          <span class="cs-meta-val">
-            EDA · KPI Analysis · Operational Insights
-          </span>
-
+          <span class="cs-meta-label">Scope</span>
+          <span class="cs-meta-val">Executive BI · Forecasting · KPI Intelligence</span>
         </div>
+
         <div>
-
-          <span class="cs-meta-label">
-            Tools
-          </span>
-
-          <span class="cs-meta-val">
-            Python · Pandas · Matplotlib
-          </span>
+          <span class="cs-meta-label">Tools</span>
+          <span class="cs-meta-val">Python · Streamlit · Plotly · Pandas</span>
         </div>
+
       </div>
 
     </section>
@@ -3065,80 +3008,54 @@
       <section class="cs-section">
 
         <div class="cs-section-header">
-
-          <span class="cs-num">
-            01
-          </span>
-
+          <span class="cs-num">01</span>
           <h2 class="cs-section-title">
-            Business Problem
+            Executive Business Challenge
           </h2>
-
         </div>
 
         <p class="cs-p">
-          Airlines operate in a highly complex
-          operational environment where delays,
-          passenger load, and fuel consumption
-          directly influence operational efficiency
-          and customer experience.
+          Airline leadership teams must balance profitability,
+          operational performance, fleet utilisation,
+          customer experience, and sustainability goals—
+          often across thousands of flights and multiple business units.
         </p>
 
         <p class="cs-p">
-          This project analyses airline operational
-          data to identify performance trends,
-          utilisation patterns, and operational
-          inefficiencies across multiple airline KPIs.
+          Traditional reporting environments provide siloed metrics,
+          making it difficult to understand the relationships between
+          revenue, operations, fleet health, passenger demand,
+          and environmental performance.
+        </p>
+
+        <p class="cs-p">
+          This project delivers a unified Airline Executive Analytics Platform
+          that consolidates commercial, operational, fleet,
+          passenger, sustainability, forecasting,
+          and AI-driven insights into a single
+          decision-support environment.
         </p>
 
         <div class="cs-stat-grid">
 
           <div class="cs-stat-cell">
-
-            <span class="cs-stat-big">
-              1k+
-            </span>
-
-            <span class="cs-stat-label">
-              Flights Analysed
-            </span>
-
+            <span class="cs-stat-big">15K+</span>
+            <span class="cs-stat-label">Flights Analysed</span>
           </div>
 
           <div class="cs-stat-cell">
-
-            <span class="cs-stat-big">
-              8+
-            </span>
-
-            <span class="cs-stat-label">
-              Operational KPIs
-            </span>
-
+            <span class="cs-stat-big">5 Years</span>
+            <span class="cs-stat-label">Historical Data</span>
           </div>
 
           <div class="cs-stat-cell">
-
-            <span class="cs-stat-big">
-              20+
-            </span>
-
-            <span class="cs-stat-label">
-              Delay & Utilisation Insights
-            </span>
-
+            <span class="cs-stat-big">6</span>
+            <span class="cs-stat-label">Executive Modules</span>
           </div>
 
           <div class="cs-stat-cell">
-
-            <span class="cs-stat-big">
-              40%
-            </span>
-
-            <span class="cs-stat-label">
-              Operational Variance Observed
-            </span>
-
+            <span class="cs-stat-big">50+</span>
+            <span class="cs-stat-label">Operational KPIs</span>
           </div>
 
         </div>
@@ -3149,57 +3066,30 @@
       <section class="cs-section">
 
         <div class="cs-section-header">
-
-          <span class="cs-num">
-            02
-          </span>
-
+          <span class="cs-num">02</span>
           <h2 class="cs-section-title">
-            Dataset & Preparation
+            Platform Architecture & Data Model
           </h2>
-
         </div>
 
         <p class="cs-p">
-          The dataset contains airline operational
-          metrics including passenger counts,
-          available seats, operational timings,
-          distance travelled, and fuel usage.
+          The platform was designed as a multi-domain executive intelligence
+          environment that integrates commercial performance,
+          operations, fleet management, passenger analytics,
+          sustainability monitoring, forecasting,
+          and AI-generated recommendations.
         </p>
 
         <div class="tag-row">
 
-          <span class="tag tag-teal">
-            Airline
-          </span>
-
-          <span class="tag tag-teal">
-            Flight Type
-          </span>
-
-          <span class="tag tag-teal">
-            Passengers
-          </span>
-
-          <span class="tag tag-teal">
-            Available Seats
-          </span>
-
-          <span class="tag tag-teal">
-            Distance KM
-          </span>
-
-          <span class="tag tag-teal">
-            Fuel Burn
-          </span>
-
-          <span class="tag tag-gold">
-            Delay Analysis
-          </span>
-
-          <span class="tag tag-gold">
-            Load Factor
-          </span>
+          <span class="tag tag-teal">Commercial Analytics</span>
+          <span class="tag tag-teal">Operations Command Center</span>
+          <span class="tag tag-teal">Fleet Performance</span>
+          <span class="tag tag-teal">Passenger Insights</span>
+          <span class="tag tag-teal">Sustainability</span>
+          <span class="tag tag-gold">Forecasting Engine</span>
+          <span class="tag tag-gold">AI Insights</span>
+          <span class="tag tag-gold">Alert Monitoring</span>
 
         </div>
 
@@ -3207,68 +3097,57 @@
 
           <li class="cs-process-item">
 
-            <span class="cs-process-dot">
-              1
-            </span>
+            <span class="cs-process-dot">1</span>
 
             <div class="cs-process-content">
-
               <p class="cs-process-title">
-                Data cleaning
+                Data Integration & KPI Engineering
               </p>
 
               <p class="cs-process-desc">
-                Validated operational timestamps,
-                handled inconsistent values,
-                and standardised key airline metrics.
+                Built a unified aviation dataset covering
+                commercial, operational, passenger,
+                fleet, and sustainability metrics with
+                executive-level KPI calculations.
               </p>
-
             </div>
 
           </li>
 
           <li class="cs-process-item">
 
-            <span class="cs-process-dot">
-              2
-            </span>
+            <span class="cs-process-dot">2</span>
 
             <div class="cs-process-content">
-
               <p class="cs-process-title">
-                KPI engineering
+                Forecasting & Analytics Layer
               </p>
 
               <p class="cs-process-desc">
-                Derived operational indicators
-                such as load factor,
-                fuel efficiency,
-                and delay variance.
+                Developed forecasting capabilities,
+                airline health scoring,
+                trend analysis,
+                and operational performance monitoring.
               </p>
-
             </div>
 
           </li>
 
           <li class="cs-process-item">
 
-            <span class="cs-process-dot">
-              3
-            </span>
+            <span class="cs-process-dot">3</span>
 
             <div class="cs-process-content">
-
               <p class="cs-process-title">
-                Exploratory analysis
+                Executive Dashboard Experience
               </p>
 
               <p class="cs-process-desc">
-                Analysed operational relationships
-                between delays,
-                passenger utilisation,
-                and operational efficiency metrics.
+                Delivered a modern Streamlit platform
+                with interactive visualisations,
+                AI-generated insights,
+                and executive-level reporting views.
               </p>
-
             </div>
 
           </li>
@@ -3281,110 +3160,111 @@
       <section class="cs-section">
 
         <div class="cs-section-header">
-
-          <span class="cs-num">
-            03
-          </span>
-
+          <span class="cs-num">03</span>
           <h2 class="cs-section-title">
-            Exploratory Analysis
+            Executive Dashboard Modules
           </h2>
-
         </div>
 
         <p class="cs-p">
-          The analysis identified several operational
-          efficiency patterns across passenger load,
-          delays, and fuel consumption behaviour.
+          The platform consists of multiple executive workspaces
+          covering every major dimension of airline performance.
         </p>
 
         <div class="cs-findings">
 
           <div class="cs-finding teal">
-
-            <span class="cs-finding-icon">
-              ✈️
-            </span>
+            <span class="cs-finding-icon">💰</span>
 
             <p class="cs-finding-title">
-              Passenger load varied significantly
+              Commercial Analytics
             </p>
 
             <p class="cs-finding-body">
-              Certain flight types demonstrated
-              stronger seat utilisation patterns
-              compared to others.
+              Revenue performance,
+              profitability,
+              passenger yield,
+              route economics,
+              and commercial trend analysis.
             </p>
-
           </div>
 
           <div class="cs-finding blue">
-
-            <span class="cs-finding-icon">
-              ⛽
-            </span>
+            <span class="cs-finding-icon">✈️</span>
 
             <p class="cs-finding-title">
-              Fuel usage increased with longer routes
+              Operations Command Center
             </p>
 
             <p class="cs-finding-body">
-              Distance travelled showed a direct
-              operational relationship with
-              fuel consumption metrics.
+              OTP,
+              delays,
+              cancellations,
+              completion rates,
+              and operational risk monitoring.
             </p>
-
           </div>
 
           <div class="cs-finding gold">
-
-            <span class="cs-finding-icon">
-              📊
-            </span>
+            <span class="cs-finding-icon">🛩️</span>
 
             <p class="cs-finding-title">
-              Operational delays impacted efficiency
+              Fleet Performance
             </p>
 
             <p class="cs-finding-body">
-              Flights with larger delay windows
-              demonstrated higher operational variance.
+              Aircraft utilisation,
+              fleet profitability,
+              maintenance efficiency,
+              and asset performance tracking.
             </p>
-
           </div>
 
           <div class="cs-finding red">
-
-            <span class="cs-finding-icon">
-              🕒
-            </span>
+            <span class="cs-finding-icon">👥</span>
 
             <p class="cs-finding-title">
-              Arrival and departure patterns emerged
+              Passenger Insights
             </p>
 
             <p class="cs-finding-body">
-              Operational timing analysis revealed
-              recurring patterns in flight scheduling.
+              Load factors,
+              occupancy,
+              passenger behaviour,
+              demand analysis,
+              and route utilisation.
+            </p>
+          </div>
+
+          <div class="cs-finding teal">
+            <span class="cs-finding-icon">🌱</span>
+
+            <p class="cs-finding-title">
+              Sustainability Analytics
             </p>
 
+            <p class="cs-finding-body">
+              Fuel burn,
+              carbon emissions,
+              environmental KPIs,
+              and sustainability performance.
+            </p>
           </div>
 
-        </div>
+          <div class="cs-finding blue">
+            <span class="cs-finding-icon">🤖</span>
 
-        <div class="cs-callout">
+            <p class="cs-finding-title">
+              Forecasting & AI Insights
+            </p>
 
-          <div class="cs-callout-label">
-            Key Insight
+            <p class="cs-finding-body">
+              Predictive forecasting,
+              health scores,
+              executive recommendations,
+              and trend projections.
+            </p>
           </div>
-
-          <p>
-            Operational efficiency in aviation
-            is heavily influenced by the combined
-            effect of utilisation,
-            delays,
-            and fuel consumption patterns.
-          </p>
 
         </div>
 
@@ -3394,105 +3274,53 @@
       <section class="cs-section">
 
         <div class="cs-section-header">
-
-          <span class="cs-num">
-            04
-          </span>
-
+          <span class="cs-num">04</span>
           <h2 class="cs-section-title">
-            Operational Insights
+            Business Value Delivered
           </h2>
-
         </div>
-
-        <p class="cs-p">
-          The exploratory analysis surfaced
-          several business-relevant operational
-          insights that could support airline
-          efficiency optimisation initiatives.
-        </p>
 
         <div class="cs-rec-list">
 
           <div class="cs-rec">
-
-            <span class="cs-rec-num">
-              1
-            </span>
+            <span class="cs-rec-num">1</span>
 
             <div class="cs-rec-text">
-
-              <strong>
-                Improve route utilisation
-              </strong>
-
-              Underutilised flights can negatively
-              impact operational efficiency
-              and overall profitability.
-
+              <strong>Executive KPI Visibility</strong>
+              Provides leadership with a single source of truth
+              for airline performance monitoring.
             </div>
-
           </div>
 
           <div class="cs-rec">
-
-            <span class="cs-rec-num">
-              2
-            </span>
+            <span class="cs-rec-num">2</span>
 
             <div class="cs-rec-text">
-
-              <strong>
-                Monitor delay-heavy operations
-              </strong>
-
-              Operational delay trends should
-              be continuously monitored to
-              improve scheduling efficiency.
-
+              <strong>Proactive Risk Identification</strong>
+              Alert monitoring and operational intelligence
+              help identify emerging performance issues early.
             </div>
-
           </div>
 
           <div class="cs-rec">
-
-            <span class="cs-rec-num">
-              3
-            </span>
+            <span class="cs-rec-num">3</span>
 
             <div class="cs-rec-text">
-
-              <strong>
-                Analyse fuel-intensive routes
-              </strong>
-
-              Long-distance and delay-heavy
-              flights contributed to higher
-              fuel consumption patterns.
-
+              <strong>Forecast-Driven Decision Making</strong>
+              Future performance projections support
+              capacity planning and strategic investments.
             </div>
-
           </div>
 
           <div class="cs-rec">
-
-            <span class="cs-rec-num">
-              4
-            </span>
+            <span class="cs-rec-num">4</span>
 
             <div class="cs-rec-text">
-
-              <strong>
-                Build operational BI dashboards
-              </strong>
-
-              Interactive dashboards would help
-              operational leadership monitor
-              delays, utilisation,
-              and airline performance centrally.
-
+              <strong>Cross-Functional Alignment</strong>
+              Commercial, operational, passenger,
+              fleet, and sustainability teams operate
+              from a shared analytics framework.
             </div>
-
           </div>
 
         </div>
@@ -3503,100 +3331,95 @@
       <section class="cs-section">
 
         <div class="cs-section-header">
-
-          <span class="cs-num">
-            05
-          </span>
-
+          <span class="cs-num">05</span>
           <h2 class="cs-section-title">
-            Tech Stack
+            Technology Stack
           </h2>
-
         </div>
 
         <div class="cs-stack-grid">
 
           <div class="cs-stack-cell">
-
-            <span class="cs-stack-name">
-              Python
-            </span>
-
-            <span class="cs-stack-role">
-              Core analysis
-            </span>
-
+            <span class="cs-stack-name">Python</span>
+            <span class="cs-stack-role">Core Analytics</span>
           </div>
 
           <div class="cs-stack-cell">
-
-            <span class="cs-stack-name">
-              Pandas
-            </span>
-
-            <span class="cs-stack-role">
-              Data wrangling
-            </span>
-
+            <span class="cs-stack-name">Streamlit</span>
+            <span class="cs-stack-role">Executive Dashboard</span>
           </div>
 
           <div class="cs-stack-cell">
-
-            <span class="cs-stack-name">
-              NumPy
-            </span>
-
-            <span class="cs-stack-role">
-              Numerical operations
-            </span>
-
+            <span class="cs-stack-name">Plotly</span>
+            <span class="cs-stack-role">Interactive Visualisation</span>
           </div>
 
           <div class="cs-stack-cell">
-
-            <span class="cs-stack-name">
-              Matplotlib
-            </span>
-
-            <span class="cs-stack-role">
-              Visualisation
-            </span>
-
+            <span class="cs-stack-name">Pandas</span>
+            <span class="cs-stack-role">Data Processing</span>
           </div>
 
           <div class="cs-stack-cell">
+            <span class="cs-stack-name">NumPy</span>
+            <span class="cs-stack-role">Statistical Computing</span>
+          </div>
 
-            <span class="cs-stack-name">
-              Seaborn
-            </span>
+          <div class="cs-stack-cell">
+            <span class="cs-stack-name">Scikit-Learn</span>
+            <span class="cs-stack-role">Predictive Analytics</span>
+          </div>
 
-            <span class="cs-stack-role">
-              Exploratory analysis
-            </span>
+          <div class="cs-stack-cell">
+            <span class="cs-stack-name">AI Insights</span>
+            <span class="cs-stack-role">Executive Recommendations</span>
+          </div>
 
+          <div class="cs-stack-cell">
+            <span class="cs-stack-name">Forecasting Engine</span>
+            <span class="cs-stack-role">Trend Projection</span>
+          </div>
+
+          <div class="cs-stack-cell">
+            <span class="cs-stack-name">Alert Engine</span>
+            <span class="cs-stack-role">Operational Monitoring</span>
           </div>
 
         </div>
 
       </section>
-      <div style="margin-top:3rem">
-        <a
-          href="https://github.com/yousuffd/Airlines-Analysis"
-          target="_blank"
-          class="btn-primary"
-        >
-          View on GitHub
 
+      <!-- CTA -->
+
+      <div style="margin-top:3rem;display:flex;gap:1rem;flex-wrap:wrap">
+
+        <a href="https://github.com/yousuffd/Airlines-Analysis"
+          target="_blank"
+          class="btn-gold">
+          View on GitHub
           <svg width="14" height="14" viewBox="0 0 24 24"
             fill="none"
             stroke="currentColor"
             stroke-width="2.5">
-
             <path d="M5 12h14M12 5l7 7-7 7"/>
-
           </svg>
         </a>
+
+        <a
+          href="YOUR_STREAMLIT_URL"
+          target="_blank"
+          class="btn-primary"
+        >
+          View on Streamlit
+          <svg width="14" height="14" viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2.5">
+            <path d="M5 12h14M12 5l7 7-7 7"/>
+          </svg>
+        </a>
+
       </div>
+
     </main>
 
   </div>
@@ -3626,64 +3449,36 @@
 
       <h1 class="cs-title">
         YouTube Analytics<br>
-        <em>Executive</em> Dashboard with<br>
-        ML-Powered Insights
+        <em>Intelligence</em> Dashboard
       </h1>
 
       <p class="cs-subtitle">
-        Comprehensive Streamlit dashboard featuring 3 machine learning prediction models,
-        6 interactive analysis tabs, strategic KPI tracking, publishing optimization,
-        and data-driven content recommendations for YouTube creators.
+        A production-grade Streamlit analytics platform for YouTube channel intelligence —
+        featuring 6 interactive analysis tabs, 5 custom strategic KPIs, 3 Random Forest ML models,
+        hour × day publishing heatmaps, and data-driven content recommendations.
+        Connects to the YouTube Data API v3 or runs on a 2,000-video synthetic dataset.
       </p>
 
       <div class="cs-meta-row">
 
         <div>
-
-          <span class="cs-meta-label">
-            Role
-          </span>
-
-          <span class="cs-meta-val">
-            BI & Analytics Lead
-          </span>
-
+          <span class="cs-meta-label">Dataset</span>
+          <span class="cs-meta-val">2,000 Videos · 50 Channels</span>
         </div>
 
         <div>
-
-          <span class="cs-meta-label">
-            Industry
-          </span>
-
-          <span class="cs-meta-val">
-            Creator Economy / Digital Media
-          </span>
-
+          <span class="cs-meta-label">Data Source</span>
+          <span class="cs-meta-val">YouTube Data API v3 · Synthetic Sample</span>
         </div>
 
         <div>
-
-          <span class="cs-meta-label">
-            Scope
-          </span>
-
-          <span class="cs-meta-val">
-            Predictive ML · Strategic KPIs · Publishing Optimization · Interactive BI
-          </span>
-
+          <span class="cs-meta-label">Stack</span>
+          <span class="cs-meta-val">Python · Streamlit · Scikit-learn · Plotly · Pandas</span>
         </div>
 
         <div>
-
-          <span class="cs-meta-label">
-            Tools
-          </span>
-
-          <span class="cs-meta-val">
-            Python · Streamlit · Scikit-learn · Plotly · YouTube API
-          </span>
-
+          <span class="cs-meta-label">ML Models</span>
+          <span class="cs-meta-val">Random Forest — Virality · Performance · Views</span>
         </div>
 
       </div>
@@ -3709,70 +3504,40 @@
         </div>
 
         <p class="cs-p">
-          YouTube creators and digital media teams need
-          sophisticated analytics beyond platform defaults
-          to optimize content strategy, predict performance,
-          and maximize audience engagement.
-          Traditional metrics don't reveal the "why" behind
-          viral success or content underperformance.
+          YouTube channels generate enormous volumes of performance data,
+          yet native platform analytics lack the depth needed for strategic decisions.
+          Creators and media teams cannot easily identify what drives virality,
+          when to publish for maximum reach, or how their KPIs compare to top performers —
+          without custom tooling.
         </p>
 
         <p class="cs-p">
-          This project delivers an executive-grade analytics dashboard
-          with machine learning forecasting, strategic KPI tracking,
-          publishing pattern optimization, and actionable recommendations—
-          enabling data-driven decisions for channel growth
-          and content performance improvement.
+          This dashboard solves that gap by connecting directly to the
+          <strong>YouTube Data API v3</strong> (or running on a 2,000-video synthetic dataset),
+          engineering 25+ analytical features, and exposing six dedicated analysis modules —
+          from executive KPI summaries to ML-powered predictions and prescriptive recommendations.
         </p>
 
         <div class="cs-stat-grid">
 
           <div class="cs-stat-cell">
-
-            <span class="cs-stat-big">
-              2K+
-            </span>
-
-            <span class="cs-stat-label">
-              Videos Analyzed
-            </span>
-
+            <span class="cs-stat-big">2<em>K</em></span>
+            <span class="cs-stat-label">Videos in sample dataset</span>
           </div>
 
           <div class="cs-stat-cell">
-
-            <span class="cs-stat-big">
-              5
-            </span>
-
-            <span class="cs-stat-label">
-              Strategic KPIs
-            </span>
-
+            <span class="cs-stat-big">50</span>
+            <span class="cs-stat-label">Channels tracked</span>
           </div>
 
           <div class="cs-stat-cell">
-
-            <span class="cs-stat-big">
-              6
-            </span>
-
-            <span class="cs-stat-label">
-              Interactive Dashboard Tabs
-            </span>
-
+            <span class="cs-stat-big">6</span>
+            <span class="cs-stat-label">Interactive analysis tabs</span>
           </div>
 
           <div class="cs-stat-cell">
-
-            <span class="cs-stat-big">
-              85%+
-            </span>
-
-            <span class="cs-stat-label">
-              ML Prediction Accuracy
-            </span>
-
+            <span class="cs-stat-big">85<em>%+</em></span>
+            <span class="cs-stat-label">ML model accuracy</span>
           </div>
 
         </div>
@@ -3795,114 +3560,72 @@
         </div>
 
         <p class="cs-p">
-          Built on Streamlit with automated YouTube Data API v3 integration,
-          the dashboard processes channel and video-level metrics through
-          comprehensive ETL pipelines, engineering 25+ features for
-          ML model training and executive KPI calculation.
+          The app fetches channel and video-level data via the
+          <strong>YouTube Data API v3</strong>, parses ISO 8601 durations into minutes,
+          applies safe division handling for zero-view videos, and engineers 25+ features
+          covering engagement rates, virality indices, performance categories, and posting patterns.
+          A fallback synthetic dataset (2,000 videos · 50 channels) ships with the app,
+          generated with a fixed seed for reproducibility.
         </p>
 
         <div class="tag-row">
-
-          <span class="tag tag-teal">
-            Views & Engagement
-          </span>
-
-          <span class="tag tag-teal">
-            Subscriber Metrics
-          </span>
-
-          <span class="tag tag-teal">
-            Publishing Patterns
-          </span>
-
-          <span class="tag tag-teal">
-            Duration Analysis
-          </span>
-
-          <span class="tag tag-gold">
-            Performance Categories
-          </span>
-
-          <span class="tag tag-gold">
-            Virality Indicators
-          </span>
-
-          <span class="tag tag-gold">
-            Quality Scores
-          </span>
-
+          <span class="tag tag-teal">views · likes · comments</span>
+          <span class="tag tag-teal">publish_date · duration_minutes</span>
+          <span class="tag tag-teal">channel_id · subscribers</span>
+          <span class="tag tag-gold">engagement_rate ← derived</span>
+          <span class="tag tag-gold">virality_index ← derived</span>
+          <span class="tag tag-gold">performance_category ← Q1/Q3 split</span>
+          <span class="tag tag-gold">views_per_day · publish_hour ← derived</span>
         </div>
 
         <ul class="cs-process">
 
           <li class="cs-process-item">
-
-            <span class="cs-process-dot">
-              1
-            </span>
-
+            <span class="cs-process-dot">1</span>
             <div class="cs-process-content">
-
-              <p class="cs-process-title">
-                Data extraction & preparation
-              </p>
-
+              <p class="cs-process-title">API ingestion & feature engineering</p>
               <p class="cs-process-desc">
-                Automated YouTube API data fetching,
-                ISO8601 timestamp parsing,
-                safe division handling for zero values,
-                and engineered features including engagement rates,
-                virality indices, and temporal patterns.
+                YouTube Data API v3 fetches channel stats and video-level metadata.
+                ISO 8601 timestamps are parsed with regex into decimal minutes.
+                25+ features are engineered: engagement rate, like rate, comment rate,
+                views per day, publish hour/day/month, and posting period buckets
+                (Morning / Afternoon / Evening / Night).
               </p>
-
             </div>
-
           </li>
 
           <li class="cs-process-item">
-
-            <span class="cs-process-dot">
-              2
-            </span>
-
+            <span class="cs-process-dot">2</span>
             <div class="cs-process-content">
-
-              <p class="cs-process-title">
-                ML model development & validation
-              </p>
-
+              <p class="cs-process-title">ML model training & validation</p>
               <p class="cs-process-desc">
-                Built 3 Random Forest models
-                (virality classification, performance categorization, views regression)
-                with 70/30 train-test split, StandardScaler normalization,
-                and feature importance analysis achieving 85%+ accuracy.
+                Three Random Forest models are trained on the engineered feature set:
+                a <strong>classifier for virality</strong> (viral vs non-viral),
+                a <strong>classifier for performance category</strong> (High / Medium / Low based on Q1/Q3 view thresholds),
+                and a <strong>regressor for view count prediction</strong>.
+                All models use a 70/30 train-test split with StandardScaler normalization,
+                and expose feature importance rankings for interpretability.
               </p>
-
             </div>
-
           </li>
 
           <li class="cs-process-item">
-
-            <span class="cs-process-dot">
-              3
-            </span>
-
+            <span class="cs-process-dot">3</span>
             <div class="cs-process-content">
-
-              <p class="cs-process-title">
-                Dashboard integration & UX optimization
-              </p>
-
+              <p class="cs-process-title">6-tab Streamlit interface</p>
               <p class="cs-process-desc">
-                Designed 6-tab Streamlit interface with Plotly visualizations,
-                smart number formatting (K/M/B suffixes),
-                dropdown filters with "All" options,
-                and responsive CSS styling for executive presentation.
+                The dashboard exposes six dedicated tabs:
+                <strong>Overview & KPIs</strong>,
+                <strong>Growth & Engagement</strong>,
+                <strong>Video Performance</strong>,
+                <strong>Content Strategy</strong>,
+                <strong>Predictions</strong>, and
+                <strong>Recommendations</strong>.
+                All charts use Plotly for interactivity, with smart K/M/B number formatting,
+                sidebar filters for channel, date range, and performance category,
+                and a dark sidebar contrasted against a light main canvas.
               </p>
-
             </div>
-
           </li>
 
         </ul>
@@ -3925,109 +3648,65 @@
         </div>
 
         <p class="cs-p">
-          The dashboard delivers 6 integrated analysis modules
-          combining descriptive analytics, predictive ML,
-          and prescriptive recommendations—
-          transforming raw YouTube data into
-          executive-actionable intelligence.
+          The dashboard's Overview tab surfaces five custom strategic KPIs
+          not available in native YouTube Studio —
+          each with a defined formula and benchmark for performance evaluation.
+          Subsequent tabs drill into growth trends, video-level performance,
+          publishing strategy, ML predictions, and prioritised recommendations.
         </p>
 
         <div class="cs-findings">
 
           <div class="cs-finding teal">
-
-            <span class="cs-finding-icon">
-              📊
-            </span>
-
-            <p class="cs-finding-title">
-              5 Strategic KPIs tracked continuously
-            </p>
-
+            <span class="cs-finding-icon">🎯</span>
+            <p class="cs-finding-title">Video Efficiency</p>
             <p class="cs-finding-body">
-              Video Efficiency, Audience Interaction Score,
-              Creator Consistency, Virality Index,
-              and Content Quality Score—
-              each with formulas and benchmarks
-              for performance evaluation.
+              Views per minute of content per 1,000 subscribers —
+              normalises performance across channels of different sizes
+              and content lengths.
             </p>
-
           </div>
 
           <div class="cs-finding blue">
-
-            <span class="cs-finding-icon">
-              🔮
-            </span>
-
-            <p class="cs-finding-title">
-              3 ML prediction models with 85%+ accuracy
-            </p>
-
+            <span class="cs-finding-icon">💬</span>
+            <p class="cs-finding-title">Audience Interaction Score</p>
             <p class="cs-finding-body">
-              Virality classification, performance category prediction,
-              and view count regression—
-              with feature importance rankings
-              and visual model diagnostics.
+              Composite of like rate (×0.5) and scaled comment rate (×0.5) —
+              captures both passive approval and active audience participation.
             </p>
-
           </div>
 
           <div class="cs-finding gold">
-
-            <span class="cs-finding-icon">
-              🗓️
-            </span>
-
-            <p class="cs-finding-title">
-              Publishing optimization heatmaps
-            </p>
-
+            <span class="cs-finding-icon">📊</span>
+            <p class="cs-finding-title">Creator Consistency</p>
             <p class="cs-finding-body">
-              Hour × Day performance analysis revealing
-              optimal posting windows,
-              with up to 40% view differential
-              between best and worst time slots.
+              100 minus the coefficient of variation in views per channel —
+              rewards stable performance over erratic viral spikes.
             </p>
-
           </div>
 
           <div class="cs-finding red">
-
-            <span class="cs-finding-icon">
-              🎯
-            </span>
-
-            <p class="cs-finding-title">
-              Actionable content recommendations
-            </p>
-
+            <span class="cs-finding-icon">🚀</span>
+            <p class="cs-finding-title">Virality Index & Content Quality Score</p>
             <p class="cs-finding-body">
-              Data-driven suggestions for
-              optimal video duration, title length,
-              posting frequency, and engagement targets—
-              with benchmark comparisons to top 25% performers.
+              Virality = views per 100 subscribers.
+              Quality = weighted composite of normalised like rate (40%),
+              comment rate (30%), and views per day (30%) — scored out of 100.
             </p>
-
           </div>
 
         </div>
 
         <div class="cs-callout">
-
-          <div class="cs-callout-label">
-            Technical Excellence
-          </div>
-
+          <div class="cs-callout-label">Tab Breakdown</div>
           <p>
-            Smart number formatting (K/M/B),
-            safe division handling preventing NaN values,
-            dropdown filters with "All" options,
-            and professional CSS styling
-            ensure executive-ready presentation
-            with zero technical friction.
+            <strong>Overview & KPIs</strong> — executive summary + 5 KPIs + engagement trend + performance donut ·
+            <strong>Growth & Engagement</strong> — monthly views + top-10 channels + engagement distribution + duration scatter ·
+            <strong>Video Performance</strong> — top 20 videos table + duration bucket analysis + radar chart ·
+            <strong>Content Strategy</strong> — hour × day publishing heatmap + posting period analysis ·
+            <strong>Predictions</strong> — 3 Random Forest models with feature importance ·
+            <strong>Recommendations</strong> — benchmarked improvement actions vs top-25% performers.
           </p>
-
         </div>
 
       </section>
@@ -4050,78 +3729,43 @@
         <div class="cs-rec-list">
 
           <div class="cs-rec">
-
             <span class="cs-rec-num">1</span>
-
             <div class="cs-rec-text">
-
-              <strong>
-                Predictive content strategy
-              </strong>
-
-              ML models forecast video performance
-              before publication, enabling creators
-              to optimize titles, timing, and duration
-              for maximum reach.
-
+              <strong>Self-serve channel intelligence</strong>
+              Any creator or media analyst can connect their YouTube API key,
+              select channels, and immediately surface performance benchmarks
+              across 5 custom KPIs — without SQL, BI tools, or manual exports.
             </div>
-
           </div>
 
           <div class="cs-rec">
-
             <span class="cs-rec-num">2</span>
-
             <div class="cs-rec-text">
-
-              <strong>
-                Publishing schedule optimization
-              </strong>
-
-              Hour × Day heatmaps identify
-              40%+ view differentials between
-              optimal and suboptimal posting times,
-              directly improving content velocity.
-
+              <strong>Publish-time optimisation</strong>
+              The hour × day heatmap (Content Strategy tab) identifies
+              optimal posting windows, with view differentials surfaced
+              between peak and off-peak slots — enabling data-driven scheduling.
             </div>
-
           </div>
 
           <div class="cs-rec">
-
             <span class="cs-rec-num">3</span>
-
             <div class="cs-rec-text">
-
-              <strong>
-                Strategic KPI monitoring
-              </strong>
-
-              5 custom metrics (Efficiency, Interaction,
-              Consistency, Virality, Quality)
-              provide executive-level performance visibility
-              beyond standard YouTube analytics.
-
+              <strong>Pre-publish performance prediction</strong>
+              Three Random Forest models (virality, performance category, view count)
+              let creators estimate a video's reach before publishing,
+              enabling title, duration, and timing adjustments ahead of launch.
             </div>
-
           </div>
 
           <div class="cs-rec">
-
             <span class="cs-rec-num">4</span>
-
             <div class="cs-rec-text">
-
-              <strong>
-                Benchmark-driven improvement
-              </strong>
-
-              Automated comparison to top 25% performers
-              surfaces specific improvement opportunities
-              in duration, frequency, and engagement tactics.
-
+              <strong>Benchmarked improvement roadmap</strong>
+              The Recommendations tab auto-generates content, scheduling,
+              and engagement targets benchmarked to the top 25% of channels —
+              turning analytics into a prioritised action list.
             </div>
-
           </div>
 
         </div>
@@ -4149,44 +3793,32 @@
 
           <div class="cs-stack-cell">
             <span class="cs-stack-name">Streamlit</span>
-            <span class="cs-stack-role">
-              Interactive dashboard framework
-            </span>
+            <span class="cs-stack-role">6-tab interactive dashboard framework</span>
           </div>
 
           <div class="cs-stack-cell">
             <span class="cs-stack-name">Python</span>
-            <span class="cs-stack-role">
-              Core data processing
-            </span>
+            <span class="cs-stack-role">Core data processing & feature engineering</span>
           </div>
 
           <div class="cs-stack-cell">
             <span class="cs-stack-name">Scikit-learn</span>
-            <span class="cs-stack-role">
-              ML modeling (Random Forest)
-            </span>
+            <span class="cs-stack-role">Random Forest classifier & regressor · StandardScaler</span>
           </div>
 
           <div class="cs-stack-cell">
             <span class="cs-stack-name">Plotly</span>
-            <span class="cs-stack-role">
-              Interactive visualizations
-            </span>
+            <span class="cs-stack-role">Interactive charts — scatter, heatmap, radar, bar, pie</span>
           </div>
 
           <div class="cs-stack-cell">
-            <span class="cs-stack-name">Pandas</span>
-            <span class="cs-stack-role">
-              Data manipulation & ETL
-            </span>
+            <span class="cs-stack-name">Pandas · NumPy</span>
+            <span class="cs-stack-role">ETL, feature derivation, safe division handling</span>
           </div>
 
           <div class="cs-stack-cell">
-            <span class="cs-stack-name">YouTube API v3</span>
-            <span class="cs-stack-role">
-              Data extraction
-            </span>
+            <span class="cs-stack-name">YouTube Data API v3</span>
+            <span class="cs-stack-role">Live channel & video-level data extraction</span>
           </div>
 
         </div>
@@ -4748,13 +4380,318 @@
     </div>
   </div>
 
+  <!-- ═══ CASE STUDY — E-COMMERCE ═══ -->
+  <div id="page-ecom-case-study" class="page">
+
+    <div class="case-back-bar">
+      <button class="case-back-btn" onclick="showPage('projects')">
+        <svg viewBox="0 0 24 24"><path d="M19 12H5M12 5l-7 7 7 7"/></svg>
+        Back to Projects
+      </button>
+    </div>
+
+    <section class="cs-hero">
+      <div class="cs-label">E-Commerce BI · C-Suite Dashboard</div>
+      <h1 class="cs-title">Electronic Commerce<br><em>Intelligence</em> Dashboard</h1>
+      <p class="cs-subtitle">
+        A production-grade 5-page Streamlit platform giving C-suite executives a single pane of glass
+        over 5,000 orders, 10 cities, and 10 product SKUs — with a real-time composite Health Score,
+        Claude AI / GPT-4o board-ready insights, and a conversational "Ask the Data" interface.
+        Supports CSV, XLSX, PostgreSQL, MySQL, and SQLite ingestion.
+      </p>
+      <div class="cs-meta-row">
+        <div><span class="cs-meta-label">Dataset</span><span class="cs-meta-val">5,000 Orders · 5-Year Synthetic · 23 Fields</span></div>
+        <div><span class="cs-meta-label">Data Sources</span><span class="cs-meta-val">CSV · XLSX · PostgreSQL · MySQL · SQLite</span></div>
+        <div><span class="cs-meta-label">Stack</span><span class="cs-meta-val">Python · Streamlit · Plotly · Pandas · Claude AI / GPT-4o</span></div>
+        <div><span class="cs-meta-label">Pages</span><span class="cs-meta-val">Executive Summary · Revenue · Operations · Profitability · AI Insights · Ask</span></div>
+      </div>
+    </section>
+
+    <main class="cs-body">
+
+      <!-- SECTION 01 -->
+      <section class="cs-section">
+        <div class="cs-section-header">
+          <span class="cs-num">01</span>
+          <h2 class="cs-section-title">Business Problem</h2>
+        </div>
+
+        <p class="cs-p">
+          E-commerce leadership teams typically rely on fragmented exports and manually assembled decks
+          to answer fundamental questions — revenue momentum, fulfilment health, margin erosion, and customer retention.
+          There is no single platform that surfaces the right number for the right audience
+          (CEO, CFO, COO) in one place, and almost none that converts raw order data
+          into actionable board intelligence without a BI team in the loop.
+        </p>
+
+        <p class="cs-p">
+          This dashboard solves that by ingesting order-level data from any source,
+          computing a <strong>composite Business Health Score (0–100)</strong> across five operational dimensions,
+          and exposing five role-specific views — from an executive morning summary
+          to a CFO-grade profitability breakdown — topped by AI-generated board narrative
+          powered by <strong>Claude (Anthropic) or GPT-4o (OpenAI)</strong>.
+        </p>
+
+        <div class="cs-stat-grid">
+          <div class="cs-stat-cell"><span class="cs-stat-big">5<em>K</em></span><span class="cs-stat-label">Orders in sample dataset</span></div>
+          <div class="cs-stat-cell"><span class="cs-stat-big">5</span><span class="cs-stat-label">Years of synthetic data (2020–2024)</span></div>
+          <div class="cs-stat-cell"><span class="cs-stat-big">23</span><span class="cs-stat-label">Engineered fields per order</span></div>
+          <div class="cs-stat-cell"><span class="cs-stat-big">6</span><span class="cs-stat-label">Dashboard pages</span></div>
+        </div>
+      </section>
+
+      <!-- SECTION 02 -->
+      <section class="cs-section">
+        <div class="cs-section-header">
+          <span class="cs-num">02</span>
+          <h2 class="cs-section-title">Data Architecture & Processing</h2>
+        </div>
+
+        <p class="cs-p">
+          The sample dataset is a realistic 5-year INR e-commerce simulation across 10 Indian cities
+          (Mumbai, Delhi, Bengaluru, Hyderabad, Chennai…), 10 SKUs across 5 categories
+          (Electronics, Fitness, Lifestyle, Smart Home, Footwear), and 8 acquisition channels
+          (Direct, Google Ads, Organic, Email, Instagram, Amazon, Flipkart, Referral).
+          YoY order volume grows from 10% weight in 2020 to 30% in 2024,
+          with a 1.5–1.8× festive season spike in November–December.
+        </p>
+
+        <div class="tag-row">
+          <span class="tag tag-teal">order_id · order_date · product_name · category</span>
+          <span class="tag tag-teal">quantity · unit_price · revenue · city · order_status</span>
+          <span class="tag tag-teal">shipping_days · carrier · payment_method · channel</span>
+          <span class="tag tag-gold">gross_margin ← COGS per SKU</span>
+          <span class="tag tag-gold">is_perfect · is_delayed · sla_breach ← derived flags</span>
+          <span class="tag tag-gold">discount_amount · discount_pct · aov ← derived</span>
+          <span class="tag tag-gold">customer_segment: Loyal / Returning / New / At-Risk</span>
+        </div>
+
+        <ul class="cs-process">
+          <li class="cs-process-item">
+            <span class="cs-process-dot">1</span>
+            <div class="cs-process-content">
+              <p class="cs-process-title">Multi-source ingestion & column mapping</p>
+              <p class="cs-process-desc">
+                Accepts CSV, XLSX, PostgreSQL, MySQL, and SQLite.
+                A smart column mapper auto-detects synonyms for required fields
+                (e.g. "sale_amount" → revenue, "ship_date" → order_date)
+                and surfaces a UI-based override for any unresolved columns.
+                Warnings are surfaced inline rather than failing silently.
+              </p>
+            </div>
+          </li>
+          <li class="cs-process-item">
+            <span class="cs-process-dot">2</span>
+            <div class="cs-process-content">
+              <p class="cs-process-title">Feature engineering — 23-field schema</p>
+              <p class="cs-process-desc">
+                Derived fields include: <strong>AOV</strong> (revenue / orders),
+                <strong>gross margin</strong> (revenue − COGS, with product-specific COGS ratios 35%–55%),
+                <strong>is_perfect</strong> (delivered, not returned, not delayed),
+                <strong>sla_breach</strong> (actual ship days &gt; carrier-promised days),
+                <strong>month / quarter / week</strong> for time aggregations,
+                and <strong>customer_segment</strong> (Loyal / Returning / New / At-Risk)
+                derived from repeat-purchase behaviour.
+              </p>
+            </div>
+          </li>
+          <li class="cs-process-item">
+            <span class="cs-process-dot">3</span>
+            <div class="cs-process-content">
+              <p class="cs-process-title">Business Health Score — composite 0–100</p>
+              <p class="cs-process-desc">
+                Five weighted sub-scores are combined into a single executive KPI:
+                Perfect Order Rate (×0.30), Refund Rate (×0.25), Cancellation Rate (×0.20),
+                MoM Revenue Growth (×0.15), and Delay Rate (×0.10).
+                A score ≥75 is green; 50–74 is amber; &lt;50 triggers a red alert.
+              </p>
+            </div>
+          </li>
+        </ul>
+      </section>
+
+      <!-- SECTION 03 -->
+      <section class="cs-section">
+        <div class="cs-section-header">
+          <span class="cs-num">03</span>
+          <h2 class="cs-section-title">Dashboard Pages & Key Features</h2>
+        </div>
+
+        <p class="cs-p">
+          Six pages cover distinct executive audiences — each opening with the most
+          important signal for that role and drilling into supporting analytics beneath.
+        </p>
+
+        <div class="cs-findings">
+          <div class="cs-finding teal">
+            <span class="cs-finding-icon">📊</span>
+            <p class="cs-finding-title">Executive Summary</p>
+            <p class="cs-finding-body">
+              5-KPI strip (Total Revenue, AOV, Perfect Order Rate, Revenue at Risk, Health Score)
+              with MoM/QoQ deltas, dynamic exec alert banners (danger / warn / good),
+              revenue trend + order volume overlay, city revenue bar, category donut,
+              and a product revenue scorecard with return-rate pills.
+            </p>
+          </div>
+
+          <div class="cs-finding blue">
+            <span class="cs-finding-icon">📈</span>
+            <p class="cs-finding-title">Revenue Deep-Dive</p>
+            <p class="cs-finding-body">
+              MoM waterfall (last 6 months), AOV trend line, category × product treemap,
+              order status split, and revenue concentration alert
+              (red if top-3 SKUs &gt;70% of revenue, green if well-diversified).
+            </p>
+          </div>
+
+          <div class="cs-finding gold">
+            <span class="cs-finding-icon">🚚</span>
+            <p class="cs-finding-title">Operations</p>
+            <p class="cs-finding-body">
+              Perfect Order Rate gauge (benchmark: 75%+), on-time delivery %, cancellation rate,
+              city × month delay heatmap, shipping speed donut
+              (Express 0–2d / Standard 3–4d / Slow 5–6d / Delayed 7d+),
+              and per-city delay rate bar coloured red/amber/green.
+            </p>
+          </div>
+
+          <div class="cs-finding red">
+            <span class="cs-finding-icon">💹</span>
+            <p class="cs-finding-title">Profitability (CFO View)</p>
+            <p class="cs-finding-body">
+              Gross Margin %, Customer Repeat Rate, Avg LTV, Revenue Lost to Discounts —
+              plus gross margin by category, acquisition channel revenue, new vs returning cohorts,
+              discount impact overlay (gross vs net revenue), customer segment revenue,
+              return reason breakdown, and SLA breach rate by carrier.
+            </p>
+          </div>
+        </div>
+
+        <div class="cs-callout">
+          <div class="cs-callout-label">AI Insights + Ask the Data</div>
+          <p>
+            The <strong>AI Insights</strong> page sends a structured business context snapshot
+            (revenue, KPIs, top products, top cities) to <strong>Claude (Anthropic)</strong> or <strong>GPT-4o</strong>
+            and streams back 6 board-ready insights covering revenue momentum, operational risk,
+            market concentration, customer economics, logistics efficiency, and a forward-looking recommendation.
+            A rule-based fallback fires automatically with no API key.
+            The <strong>Ask the Data</strong> page extends this into a full conversational interface —
+            executives can ask free-form questions and receive quantitative, board-appropriate answers
+            grounded exclusively in the loaded dataset.
+          </p>
+        </div>
+      </section>
+
+      <!-- SECTION 04 -->
+      <section class="cs-section">
+        <div class="cs-section-header">
+          <span class="cs-num">04</span>
+          <h2 class="cs-section-title">Business Value</h2>
+        </div>
+
+        <div class="cs-rec-list">
+          <div class="cs-rec">
+            <span class="cs-rec-num">1</span>
+            <div class="cs-rec-text">
+              <strong>Single C-suite pane of glass</strong>
+              One app replaces fragmented CSV exports and manually assembled decks —
+              surfacing the right KPI for each role (CEO / CFO / COO) through dedicated pages
+              that open with the most critical signal first.
+            </div>
+          </div>
+
+          <div class="cs-rec">
+            <span class="cs-rec-num">2</span>
+            <div class="cs-rec-text">
+              <strong>Proactive executive alerting</strong>
+              Dynamic alert banners auto-fire when MoM growth drops below −5%,
+              refund rate exceeds 8%, cancellation rate exceeds 5%,
+              or Perfect Order Rate falls below 60% — removing the need for manual threshold monitoring.
+            </div>
+          </div>
+
+          <div class="cs-rec">
+            <span class="cs-rec-num">3</span>
+            <div class="cs-rec-text">
+              <strong>Instant board narrative from AI</strong>
+              Six quantified, board-appropriate insights are generated on demand by Claude or GPT-4o,
+              covering every strategic dimension — from revenue concentration risk
+              to city-level replication opportunities — with no analyst involvement required.
+            </div>
+          </div>
+
+          <div class="cs-rec">
+            <span class="cs-rec-num">4</span>
+            <div class="cs-rec-text">
+              <strong>Source-agnostic deployment</strong>
+              Works with any order dataset — CSV, XLSX, or live database connection —
+              with auto-column detection and a UI mapper for non-standard schemas.
+              Deployable on Streamlit Community Cloud with zero infrastructure overhead.
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- SECTION 05 -->
+      <section class="cs-section">
+        <div class="cs-section-header">
+          <span class="cs-num">05</span>
+          <h2 class="cs-section-title">Tech Stack</h2>
+        </div>
+
+        <div class="cs-stack-grid">
+          <div class="cs-stack-cell">
+            <span class="cs-stack-name">Streamlit</span>
+            <span class="cs-stack-role">6-page interactive dashboard framework</span>
+          </div>
+          <div class="cs-stack-cell">
+            <span class="cs-stack-name">Python · Pandas · NumPy</span>
+            <span class="cs-stack-role">ETL, feature engineering, KPI computation</span>
+          </div>
+          <div class="cs-stack-cell">
+            <span class="cs-stack-name">Plotly</span>
+            <span class="cs-stack-role">Waterfall, treemap, gauge, heatmap, donut charts</span>
+          </div>
+          <div class="cs-stack-cell">
+            <span class="cs-stack-name">Claude AI (Anthropic)</span>
+            <span class="cs-stack-role">Board-ready insights + conversational Q&A</span>
+          </div>
+          <div class="cs-stack-cell">
+            <span class="cs-stack-name">GPT-4o (OpenAI)</span>
+            <span class="cs-stack-role">Alternative AI insights provider</span>
+          </div>
+          <div class="cs-stack-cell">
+            <span class="cs-stack-name">PostgreSQL · MySQL · SQLite</span>
+            <span class="cs-stack-role">Live database connectors via SQLAlchemy</span>
+          </div>
+        </div>
+      </section>
+
+      <div style="margin-top:3rem">
+        <a href="https://github.com/yousuffd" target="_blank" class="btn-primary">
+          View on GitHub
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+            <path d="M5 12h14M12 5l7 7-7 7"/>
+          </svg>
+        </a>
+        <a href="https://ecom-csuite.streamlit.app" target="_blank" class="btn-primary">
+          View Live App
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+            <path d="M5 12h14M12 5l7 7-7 7"/>
+          </svg>
+        </a>
+      </div>
+
+    </main>
+  </div>
+
   <script>
     function showPage(id) {
       document.querySelectorAll('.page').forEach(p => p.classList.remove('active'));
       document.querySelectorAll('.nav-links a').forEach(a => a.classList.remove('active'));
       const page = document.getElementById('page-' + id);
       if (page) { page.classList.add('active'); window.scrollTo(0, 0) }
-      const navMap = { home: 'nav-home', about: 'nav-about', projects: 'nav-projects', 'case-bike': 'nav-projects', contact: 'nav-home' };
+      const navMap = { home: 'nav-home', about: 'nav-about', projects: 'nav-projects', 'case-bike': 'nav-projects', 'youtube-case-study': 'nav-projects', 'ecom-case-study': 'nav-projects', 'airlines-case-study': 'nav-projects', 'sales-dashboard-case-study': 'nav-projects', contact: 'nav-home' };
       const navEl = document.getElementById(navMap[id]);
       if (navEl) navEl.classList.add('active');
     }
