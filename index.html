@@ -1672,6 +1672,42 @@
       font-weight: 300
     }
 
+    .cs-gallery {
+      display: flex;
+      flex-direction: column;
+      gap: 1.75rem;
+      margin: 1.75rem 0;
+    }
+
+    .cs-gallery-frame {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: var(--r2);
+      padding: 0.6rem;
+      transition: box-shadow 0.2s, transform 0.2s;
+    }
+
+    .cs-gallery-frame:hover {
+      box-shadow: 0 10px 30px rgba(30, 48, 84, 0.14);
+      transform: translateY(-2px)
+    }
+
+    .cs-gallery-frame img {
+      width: 100%;
+      display: block;
+      border-radius: calc(var(--r2) - 4px);
+      border: 1px solid var(--border);
+    }
+
+    .cs-gallery-caption {
+      font-size: 0.78rem;
+      color: var(--text2);
+      font-weight: 300;
+      margin-top: 0.7rem;
+      padding: 0 0.4rem;
+      text-align: center;
+    }
+
     .cs-model-table {
       width: 100%;
       border-collapse: collapse;
@@ -2535,7 +2571,44 @@
 
     <div class="projects-grid">
 
-      <!-- 1 · Airlines -->
+      <!-- 2 · SaaS Analytics -->
+      <a class="project-card" onclick="showPage('saas-revenue-case-study')">
+        <div class="project-card-visual revenue">
+            <div class="visual-icon">
+                <!-- Bar chart icon -->
+                <svg viewBox="0 0 24 24" fill="none" stroke="#7A5B00" stroke-width="2">
+                    <path d="M4 20V10"/>
+                    <path d="M10 20V5"/>
+                    <path d="M16 20V13"/>
+                    <path d="M22 20V2"/>
+                </svg>
+            </div>
+        </div>
+        <div class="project-card-body">
+            <div class="project-card-tag">
+                Revenue Analytics • Excel • Power Query • DAX
+            </div>
+            <h3 class="project-card-name">
+                SaaS Revenue Analytics Dashboard
+            </h3>
+           <p class="project-card-desc">
+                Enterprise-grade Revenue Analytics solution built using synthetic SaaS subscription data.
+                Includes ARR, MRR, NRR, GRR, churn analysis, cohort retention, customer segmentation,
+                revenue movement analysis, executive KPIs and forecasting.
+            </p>
+        </div>
+        <div class="project-card-footer">
+            <span class="project-status-done">
+                Completed
+            </span>
+            <span class="project-arrow">
+                →
+            </span>
+        </div>
+    </a>
+
+
+      <!-- 2 · Airlines -->
       <a class="project-card" onclick="showPage('airlines-case-study')">
         <div class="project-card-visual airlines">
           <div class="visual-icon">
@@ -2555,7 +2628,7 @@
         </div>
       </a>
 
-      <!-- 2 · YouTube -->
+      <!-- 3 · YouTube -->
       <a class="project-card" onclick="showPage('youtube-case-study')">
         <div class="project-card-visual youtube">
           <div class="visual-icon">
@@ -2576,7 +2649,7 @@
         </div>
       </a>
 
-      <!-- 3 · E-Commerce -->
+      <!-- 4 · E-Commerce -->
       <a class="project-card" onclick="showPage('ecom-case-study')">
         <div class="project-card-visual ecom">
           <div class="visual-icon" style="border-color:rgba(5,150,105,0.3)">
@@ -2598,7 +2671,7 @@
         </div>
       </a>
 
-      <!-- 4 · Sales Dashboard -->
+      <!-- 5 · Sales Dashboard -->
       <a class="project-card" onclick="showPage('sales-dashboard-case-study')">
         <div class="project-card-visual revenue">
           <div class="visual-icon" style="border-color:rgba(78,168,255,0.35)">
@@ -2621,7 +2694,7 @@
         </div>
       </a>
 
-      <!-- 5 · Bike Sharing -->
+      <!-- 6 · Bike Sharing -->
       <div class="project-card" onclick="showPage('case-bike')">
         <div class="project-card-visual bike">
           <div class="visual-icon" style="border-color:rgba(14,123,114,0.3)">
@@ -4383,6 +4456,529 @@
 
   </div>
 
+  <!-- ═══ SAAS REVENUE ANALYTICS CASE STUDY ═══ -->
+  <div id="page-saas-revenue-case-study" class="page">
+
+    <!-- BACK -->
+    <div class="case-back-bar">
+      <button class="case-back-btn"
+        onclick="showPage('projects')">
+        ← Back to Projects
+      </button>
+    </div>
+
+    <!-- HERO -->
+    <section class="cs-hero">
+
+      <div class="cs-label">
+        Excel · Revenue Analytics · Case Study
+      </div>
+
+      <h1 class="cs-title">
+        SaaS Revenue<br>
+        <em>Analytics</em> Dashboard<br>
+        Template
+      </h1>
+
+      <p class="cs-subtitle">
+        Enterprise-grade revenue analytics template built on a
+        synthetic 36-month, 500-customer SaaS dataset — covering
+        ARR/MRR movement, NRR/GRR retention, cohort analysis,
+        CAC/LTV economics, services delivery, and executive KPIs,
+        modelled entirely in Excel with a Power Query and DAX
+        build kit.
+      </p>
+
+      <div class="cs-hero-cta">
+        <a href="SaaS_Revenue_Analytics_Template_Final.xlsx" target="_blank" class="btn-gold" style="text-decoration:none">
+          Download Excel Template
+          <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+        </a>
+      </div>
+
+      <div class="cs-meta-row">
+        <div>
+          <span class="cs-meta-label">Role</span>
+          <span class="cs-meta-val">
+            BI & Analytics Lead
+          </span>
+        </div>
+
+        <div>
+          <span class="cs-meta-label">Industry</span>
+          <span class="cs-meta-val">
+            SaaS / Cybersecurity
+          </span>
+        </div>
+
+        <div>
+          <span class="cs-meta-label">Scope</span>
+          <span class="cs-meta-val">
+            Revenue Modelling · Retention Analytics · Executive KPIs
+          </span>
+        </div>
+
+        <div>
+          <span class="cs-meta-label">Tools</span>
+          <span class="cs-meta-val">
+            Excel · Power Query · DAX · Python
+          </span>
+        </div>
+      </div>
+
+    </section>
+
+    <!-- BODY -->
+    <main class="cs-body">
+
+      <!-- SECTION 01 -->
+      <section class="cs-section">
+
+        <div class="cs-section-header">
+
+          <span class="cs-num">01</span>
+
+          <h2 class="cs-section-title">
+            Business Problem
+          </h2>
+
+        </div>
+
+        <p class="cs-p">
+          Growth-stage SaaS companies typically track revenue health
+          across a patchwork of spreadsheets — one for MRR movement,
+          another for cohort retention, another for CAC and services
+          margin — with no single view a CFO or board can trust.
+        </p>
+
+        <p class="cs-p">
+          This template centralises that reporting into one
+          formula-driven Excel workbook, modelled on
+          <strong>Sentinel Grid Security</strong>, a fictional
+          cybersecurity vendor selling subscription products
+          alongside a professional services practice. It uses a
+          synthetic dataset — 500 customers over 36 months — built
+          to sit in plausible growth-stage territory, so the
+          mechanics generalise to any subscription business.
+        </p>
+
+        <div class="cs-stat-grid">
+
+          <div class="cs-stat-cell">
+            <span class="cs-stat-big">$43.0M</span>
+            <span class="cs-stat-label">
+              ARR, +51.3% YoY
+            </span>
+          </div>
+
+          <div class="cs-stat-cell">
+            <span class="cs-stat-big">111%</span>
+            <span class="cs-stat-label">
+              Net Revenue Retention
+            </span>
+          </div>
+
+          <div class="cs-stat-cell">
+            <span class="cs-stat-big">500</span>
+            <span class="cs-stat-label">
+              Customers · 36 Months
+            </span>
+          </div>
+
+          <div class="cs-stat-cell">
+            <span class="cs-stat-big">5x</span>
+            <span class="cs-stat-label">
+              LTV : CAC
+            </span>
+          </div>
+
+        </div>
+
+      </section>
+
+      <!-- SECTION 02 -->
+      <section class="cs-section">
+
+        <div class="cs-section-header">
+
+          <span class="cs-num">02</span>
+
+          <h2 class="cs-section-title">
+            Model Architecture
+          </h2>
+
+        </div>
+
+        <div class="tag-row">
+
+          <span class="tag tag-teal">ARR / MRR Waterfall</span>
+          <span class="tag tag-teal">NRR / GRR Retention</span>
+          <span class="tag tag-teal">Cohort Retention Grids</span>
+          <span class="tag tag-teal">CAC / LTV / Payback</span>
+          <span class="tag tag-teal">Services Margin & Utilisation</span>
+
+          <span class="tag tag-gold">Executive Risk Overview</span>
+          <span class="tag tag-gold">Revenue Leakage</span>
+          <span class="tag tag-gold">Pipeline & Renewals</span>
+
+        </div>
+
+        <ul class="cs-process">
+
+          <li class="cs-process-item">
+
+            <span class="cs-process-dot">1</span>
+
+            <div class="cs-process-content">
+
+              <p class="cs-process-title">
+                Synthetic data generation
+              </p>
+
+              <p class="cs-process-desc">
+                Generated a seeded, reproducible dataset in Python —
+                dimension and fact tables for customers, products,
+                MRR movement, services, capacity, marketing, pipeline
+                and leakage — calibrated to plausible growth-stage
+                cyber-SaaS ranges.
+              </p>
+
+            </div>
+
+          </li>
+
+          <li class="cs-process-item">
+
+            <span class="cs-process-dot">2</span>
+
+            <div class="cs-process-content">
+
+              <p class="cs-process-title">
+                Formula-driven calculation engine
+              </p>
+
+              <p class="cs-process-desc">
+                Built a 36-row Monthly_Metrics engine on SUMIFS /
+                SUMPRODUCT rather than Power Pivot, so the workbook
+                recalculates natively on Excel for Mac with no add-ins.
+              </p>
+
+            </div>
+
+          </li>
+
+          <li class="cs-process-item">
+
+            <span class="cs-process-dot">3</span>
+
+            <div class="cs-process-content">
+
+              <p class="cs-process-title">
+                Power Query + DAX build kit
+              </p>
+
+              <p class="cs-process-desc">
+                Shipped the M code and full DAX measure library
+                alongside the data, so the same tables can be wired
+                into a live Power Pivot model and slicer-driven
+                PivotTables in minutes.
+              </p>
+
+            </div>
+
+          </li>
+
+        </ul>
+
+      </section>
+
+      <!-- SECTION 03 — GALLERY -->
+      <section class="cs-section">
+
+        <div class="cs-section-header">
+
+          <span class="cs-num">03</span>
+
+          <h2 class="cs-section-title">
+            Executive Dashboard
+          </h2>
+
+        </div>
+
+        <p class="cs-p">
+          The Dashboard tab surfaces headline ARR and retention KPIs,
+          revenue-by-geography and subscription movement, then drills
+          into customer health, top accounts, renewals due, revenue
+          leakage and an executive risk overview beneath the fold.
+        </p>
+
+        <div class="cs-gallery">
+
+          <div class="cs-gallery-frame">
+            <img src="saas-dashboard-overview.png" alt="SaaS Revenue Analytics dashboard — KPI cards, revenue by geography, and subscription metrics">
+          </div>
+          <p class="cs-gallery-caption">
+            KPI card row (ARR, NRR, GRR, CAC payback, LTV:CAC) with revenue-by-geography and subscription movement charts.
+          </p>
+
+          <div class="cs-gallery-frame">
+            <img src="saas-dashboard-detail.png" alt="SaaS Revenue Analytics dashboard — customer health, top customers, renewals and risk overview">
+          </div>
+          <p class="cs-gallery-caption">
+            Customer health, top-customer and renewals-due tables, revenue leakage, and the executive risk overview.
+          </p>
+
+          <div class="cs-gallery-frame">
+            <img src="saas-cohort-retention.png" alt="Cohort retention grid showing MRR and logo retention by acquisition month">
+          </div>
+          <p class="cs-gallery-caption">
+            Cohort retention grid — MRR and logo retention tracked by acquisition month across 36 in-window cohorts.
+          </p>
+
+        </div>
+
+      </section>
+
+      <!-- SECTION 04 -->
+      <section class="cs-section">
+
+        <div class="cs-section-header">
+
+          <span class="cs-num">04</span>
+
+          <h2 class="cs-section-title">
+            Key Insights
+          </h2>
+
+        </div>
+
+        <div class="cs-findings">
+
+          <div class="cs-finding teal">
+
+            <span class="cs-finding-icon">📈</span>
+
+            <p class="cs-finding-title">
+              Expansion is outrunning churn
+            </p>
+
+            <p class="cs-finding-body">
+              111% annualised NRR against 93% GRR shows expansion
+              revenue from existing accounts more than offsetting
+              contraction and churn.
+            </p>
+
+          </div>
+
+          <div class="cs-finding blue">
+
+            <span class="cs-finding-icon">🌍</span>
+
+            <p class="cs-finding-title">
+              Revenue is concentrated in North America
+            </p>
+
+            <p class="cs-finding-body">
+              North America carries 57% of ARR at $22.0M, with EMEA
+              at $13.0M — leaving APAC and LATAM as the smaller,
+              faster-growth regions.
+            </p>
+
+          </div>
+
+          <div class="cs-finding gold">
+
+            <span class="cs-finding-icon">💰</span>
+
+            <p class="cs-finding-title">
+              CAC payback sits inside target
+            </p>
+
+            <p class="cs-finding-body">
+              A 14.5-month payback against an 18-month target, with
+              LTV:CAC above 5x, points to efficient go-to-market
+              spend at current S&amp;M levels.
+            </p>
+
+          </div>
+
+          <div class="cs-finding red">
+
+            <span class="cs-finding-icon">🛠️</span>
+
+            <p class="cs-finding-title">
+              Services capacity is a watch item
+            </p>
+
+            <p class="cs-finding-body">
+              Delivery utilisation near 75% against a 75% target
+              leaves little slack — a signal to plan headcount ahead
+              of continued ARR growth.
+            </p>
+
+          </div>
+
+        </div>
+
+        <div class="cs-callout">
+
+          <div class="cs-callout-label">
+            Executive Insight
+          </div>
+
+          <p>
+            Reading retention, geography and services capacity side
+            by side turns three disconnected spreadsheets into one
+            forward-looking view of where growth is efficient — and
+            where it's about to get constrained.
+          </p>
+
+        </div>
+
+      </section>
+
+      <!-- SECTION 05 -->
+      <section class="cs-section">
+
+        <div class="cs-section-header">
+
+          <span class="cs-num">05</span>
+
+          <h2 class="cs-section-title">
+            Business Value
+          </h2>
+
+        </div>
+
+        <div class="cs-rec-list">
+
+          <div class="cs-rec">
+
+            <span class="cs-rec-num">1</span>
+
+            <div class="cs-rec-text">
+
+              <strong>
+                One source of truth for revenue
+              </strong>
+
+              Replaces scattered ARR, retention, and cohort
+              spreadsheets with a single formula-driven model that
+              recalculates end to end.
+
+            </div>
+
+          </div>
+
+          <div class="cs-rec">
+
+            <span class="cs-rec-num">2</span>
+
+            <div class="cs-rec-text">
+
+              <strong>
+                Board-ready in minutes
+              </strong>
+
+              KPI cards and movement waterfalls are structured for
+              direct use in quarterly board and investor updates.
+
+            </div>
+
+          </div>
+
+          <div class="cs-rec">
+
+            <span class="cs-rec-num">3</span>
+
+            <div class="cs-rec-text">
+
+              <strong>
+                Portable to any subscription business
+              </strong>
+
+              Swapping in real fact and dimension tables — keeping
+              the same headers and table names — lets the whole
+              workbook recalculate against actual company data.
+
+            </div>
+
+          </div>
+
+        </div>
+
+      </section>
+
+      <!-- SECTION 06 -->
+      <section class="cs-section">
+
+        <div class="cs-section-header">
+
+          <span class="cs-num">06</span>
+
+          <h2 class="cs-section-title">
+            Tech Stack
+          </h2>
+
+        </div>
+
+        <div class="cs-stack-grid">
+
+          <div class="cs-stack-cell">
+            <span class="cs-stack-name">Excel</span>
+            <span class="cs-stack-role">
+              Calculation engine & dashboard
+            </span>
+          </div>
+
+          <div class="cs-stack-cell">
+            <span class="cs-stack-name">Power Query (M)</span>
+            <span class="cs-stack-role">
+              Data model build kit
+            </span>
+          </div>
+
+          <div class="cs-stack-cell">
+            <span class="cs-stack-name">DAX</span>
+            <span class="cs-stack-role">
+              Retention & cohort measures
+            </span>
+          </div>
+
+          <div class="cs-stack-cell">
+            <span class="cs-stack-name">Python</span>
+            <span class="cs-stack-role">
+              Seeded synthetic data generation
+            </span>
+          </div>
+
+        </div>
+
+      </section>
+
+      <div style="margin-top:3rem">
+        <a
+          href="SaaS_Revenue_Analytics_Template_Final.xlsx"
+          target="_blank"
+          class="btn-primary"
+        >
+          Download Excel Template
+
+          <svg width="14" height="14" viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2.5">
+
+            <path d="M5 12h14M12 5l7 7-7 7"/>
+
+          </svg>
+        </a>
+      </div>
+
+    </main>
+
+  </div>
+
   <!-- ═══ CONTACT PAGE ═══ -->
   <div id="page-contact" class="page">
     <div style="display:grid;grid-template-columns:1fr minmax(340px,420px);min-height:calc(100vh - 70px);align-items:center;border-bottom:1px solid var(--border)">
@@ -4753,7 +5349,7 @@
       document.querySelectorAll('.nav-links a').forEach(a => a.classList.remove('active'));
       const page = document.getElementById('page-' + id);
       if (page) { page.classList.add('active'); window.scrollTo(0, 0) }
-      const navMap = { home: 'nav-home', about: 'nav-about', projects: 'nav-projects', 'case-bike': 'nav-projects', 'youtube-case-study': 'nav-projects', 'ecom-case-study': 'nav-projects', 'airlines-case-study': 'nav-projects', 'sales-dashboard-case-study': 'nav-projects', contact: 'nav-home' };
+      const navMap = { home: 'nav-home', about: 'nav-about', projects: 'nav-projects', 'case-bike': 'nav-projects', 'youtube-case-study': 'nav-projects', 'ecom-case-study': 'nav-projects', 'airlines-case-study': 'nav-projects', 'sales-dashboard-case-study': 'nav-projects', 'saas-revenue-case-study': 'nav-projects', contact: 'nav-home' };
       const navEl = document.getElementById(navMap[id]);
       if (navEl) navEl.classList.add('active');
     }
